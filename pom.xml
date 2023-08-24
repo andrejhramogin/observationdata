@@ -139,7 +139,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <imageName>upagge/spring-boot-docker:spring-plugin</imageName>
+                    <imageName>andrejhr/observation:spring-plugin</imageName>
                 </configuration>
             </plugin>
             <!-- ... -->

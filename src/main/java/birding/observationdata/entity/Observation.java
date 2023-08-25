@@ -37,28 +37,34 @@ public class Observation {
     @Schema(description = "ID of table 'nest'", example = "1")
     private Nest nest;
 
+    //    @OneToOne(optional = false)
+//    @JoinColumn(name = "species_id", nullable = false)
+    @Column(name="species_id", nullable = false)
+    @Schema(description = "ID of table 'species'", example = "2")
+    private int speciesId;
+
+
+    //    @OneToOne(optional = false)
+//    @JoinColumn(name = "user_id", nullable = false)
+    @Column(name="user_id", nullable = false)
+    @Schema(description = "ID of table 'user'", example = "2")
+    private int userId;
 
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "place_id", nullable = false)
-//    @Schema(description = "ID of table 'place'", example = "3")
+    @Column(name="place_id", nullable = false)
+    @Schema(description = "ID of table 'place'", example = "3")
     private int placeId;
 
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "user_id", nullable = false)
-//    @Schema(description = "ID of table 'user'", example = "2")
-    private int userId;
 
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "species_id", nullable = false)
-//    @Schema(description = "ID of table 'species'", example = "2")
-    private int speciesId;
-
-    @Column(name = "created_at")
+    @Column(name = "created_at", insertable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
 
-    @Column(name = "modified_at")
+    @Column(name = "modified_at", insertable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
@@ -66,16 +72,16 @@ public class Observation {
     public Observation(){}
 
     public Observation(Integer id, Date date, int quantity, String description,
-                       int placeId, Nest nest, int userId, int speciesId,
+                       Nest nest, int speciesId, int userId, int placeId,
                        Timestamp createdAt, Timestamp modifiedAt) {
         this.id = id;
         this.date = date;
         this.quantity = quantity;
         this.description = description;
-        this.placeId = placeId;
         this.nest = nest;
-        this.userId = userId;
         this.speciesId = speciesId;
+        this.userId = userId;
+        this.placeId = placeId;
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
     }
@@ -112,20 +118,20 @@ public class Observation {
         this.description = description;
     }
 
-    public int getPlaceId() {
-        return placeId;
-    }
-
-    public void setPlaceId(int placeId) {
-        this.placeId = placeId;
-    }
-
     public Nest getNest() {
         return nest;
     }
 
     public void setNest(Nest nest) {
         this.nest = nest;
+    }
+
+    public int getSpeciesId() {
+        return speciesId;
+    }
+
+    public void setSpeciesId(int speciesId) {
+        this.speciesId = speciesId;
     }
 
     public int getUserId() {
@@ -136,12 +142,12 @@ public class Observation {
         this.userId = userId;
     }
 
-    public int getSpeciesId() {
-        return speciesId;
+    public int getPlaceId() {
+        return placeId;
     }
 
-    public void setSpeciesId(int speciesId) {
-        this.speciesId = speciesId;
+    public void setPlaceId(int placeId) {
+        this.placeId = placeId;
     }
 
     public Timestamp getCreatedAt() {
@@ -160,19 +166,4 @@ public class Observation {
         this.modifiedAt = modifiedAt;
     }
 
-    @Override
-    public String toString() {
-        return "Observation{" +
-                "id=" + id +
-                ", date=" + date +
-                ", quantity=" + quantity +
-                ", description='" + description + '\'' +
-                ", placeId=" + placeId +
-                ", nest=" + nest +
-                ", userId=" + userId +
-                ", speciesId=" + speciesId +
-                ", createdAt=" + createdAt +
-                ", modifiedAt=" + modifiedAt +
-                '}';
-    }
 }

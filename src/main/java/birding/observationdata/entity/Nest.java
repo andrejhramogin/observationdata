@@ -60,4 +60,99 @@ public class Nest {
 
     public Nest(){}
 
+    public Nest(Integer id, int eggsQuantity, int chicksNumber,
+                String description, Biotope biotope, Location location,
+                NestType nestType, NestDimension nestDimension,
+                Timestamp createdAt, Timestamp modifiedAt) {
+        this.id = id;
+        this.eggsQuantity = eggsQuantity;
+        this.chicksNumber = chicksNumber;
+        this.description = description;
+        this.biotope = biotope;
+        this.location = location;
+        this.nestType = nestType;
+        this.nestDimension = nestDimension;
+        this.createdAt = createdAt;
+        this.modifiedAt = modifiedAt;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public int getEggsQuantity() {
+        return eggsQuantity;
+    }
+
+    public void setEggsQuantity(int eggsQuantity) {
+        this.eggsQuantity = eggsQuantity;
+    }
+
+    public int getChicksNumber() {
+        return chicksNumber;
+    }
+
+    public void setChicksNumber(int chicksNumber) {
+        this.chicksNumber = chicksNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Biotope getBiotope() {
+        return biotope;
+    }
+
+    public void setBiotope(Biotope biotope) {
+        this.biotope = biotope;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public NestType getNestType() {
+        return nestType;
+    }
+
+    public void setNestType(NestType nestType) {
+        this.nestType = nestType;
+    }
+
+    public NestDimension getNestDimension() {
+        return nestDimension;
+    }
+
+    public void setNestDimension(NestDimension nestDimension) {
+        this.nestDimension = nestDimension;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getModifiedAt() {
+        return modifiedAt;
+    }
+
+    public void setModifiedAt(Timestamp modifiedAt) {
+        this.modifiedAt = modifiedAt;
+    }
 }

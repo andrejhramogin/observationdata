@@ -10,6 +10,21 @@ import java.sql.Timestamp;
 @Table(name = "observation")
 public class Observation {
 
+    private Nest nest;
+    @OneToOne(optional = true)
+    @JoinColumn(name = "nest_id", referencedColumnName = "id")
+
+    public Nest getNest() {
+        return nest;
+    }
+    public void setNest(Nest nest) {
+        this.nest = nest;
+    }
+
+    @Column(name = "nest_id")
+    @Schema(description = "ID of table 'nest'", example = "1")
+    private Integer nestId;
+
     @Id
     @Column(name = "id", insertable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +47,6 @@ public class Observation {
             example = "A couple on the nest site")
     private String description;
 
-    @OneToOne(optional = true)
-    @JoinColumn(name = "nest_id")
-    @Schema(description = "ID of table 'nest'", example = "1")
-    private Nest nest;
 
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "species_id", nullable = false)
@@ -72,18 +83,26 @@ public class Observation {
     public Observation(){}
 
     public Observation(Integer id, Date date, int quantity, String description,
-                       Nest nest, int speciesId, int userId, int placeId,
+                       Integer nestId, int speciesId, int userId, int placeId,
                        Timestamp createdAt, Timestamp modifiedAt) {
         this.id = id;
         this.date = date;
         this.quantity = quantity;
         this.description = description;
-        this.nest = nest;
+        this.nestId = nestId;
         this.speciesId = speciesId;
         this.userId = userId;
         this.placeId = placeId;
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
+    }
+
+    public Integer getNestId() {
+        return nestId;
+    }
+
+    public void setNestId(Integer nestId){
+        this.nestId=nestId;
     }
 
     public Integer getId() {
@@ -118,13 +137,7 @@ public class Observation {
         this.description = description;
     }
 
-    public Nest getNest() {
-        return nest;
-    }
 
-    public void setNest(Nest nest) {
-        this.nest = nest;
-    }
 
     public int getSpeciesId() {
         return speciesId;

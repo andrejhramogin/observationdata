@@ -17,15 +17,11 @@ public class Biotope {
             example = "Forest")
     private String type;
 
-    @OneToOne(optional = false, mappedBy = "biotope")
-    private Nest nest;
-
     public Biotope(){}
 
     public Biotope(Integer id, String type, Nest nest) {
         this.id = id;
         this.type = type;
-        this.nest = nest;
     }
 
     public Integer getId() {
@@ -42,13 +38,5 @@ public class Biotope {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public Nest getNest() {
-        return nest;
-    }
-
-    public void setNest(Nest nest) {
-        this.nest = nest;
     }
 }

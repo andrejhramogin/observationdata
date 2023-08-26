@@ -75,8 +75,8 @@ public class Observation {
     example = "2022-10-03 10:20:11.114")
     private LocalDateTime createdAt;
 
+    @CreationTimestamp
     @Column(name = "modified_at", insertable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;

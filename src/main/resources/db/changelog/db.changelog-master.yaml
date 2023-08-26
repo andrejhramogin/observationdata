@@ -17,7 +17,7 @@ databaseChangeLog:
 #              - column:
 #                  name: type
 #                  type: varchar
-
+#
 #        - createTable:
 #            tableName: species
 #            columns:
@@ -31,7 +31,7 @@ databaseChangeLog:
 #              - column:
 #                  name: species_name
 #                  type: varchar
-
+#
 #        - createTable:
 #            tableName: place
 #            columns:
@@ -112,42 +112,42 @@ databaseChangeLog:
               - column:
                   name: eggs_quantity
                   type: INT
-              - column:
-                  name: chicks_quantity
-                  type: INT
-              - column:
-                  name: description
-                  type: varchar
-              - column:
-                  name: biotope_id
-                  type: INT
-                  constraints:
-                    foreignKeyName: biotope_id
-                    references: biotope(id)
-              - column:
-                  name: location_id
-                  type: INT
-                  constraints:
-                    foreignKeyName: location_id
-                    references: location(id)
-              - column:
-                  name: nest_type_id
-                  type: INT
-                  constraints:
-                    foreignKeyName: nest_type_id
-                    references: nest_type(id)
-              - column:
-                  name: nest_dimension_id
-                  type: INT
-                  constraints:
-                    foreignKeyName: nest_dimension_id
-                    references: nest_dimension(id)
-              - column:
-                  name: created_at
-                  type: TIMESTAMP
-              - column:
-                  name: modified_at
-                  type: TIMESTAMP
+#              - column:
+#                  name: chicks_quantity
+#                  type: INT
+#              - column:
+#                  name: description
+#                  type: varchar
+#              - column:
+#                  name: biotope_id
+#                  type: INT
+#                  constraints:
+#                    foreignKeyName: biotope_id
+#                    references: biotope(id)
+#              - column:
+#                  name: location_id
+#                  type: INT
+#                  constraints:
+#                    foreignKeyName: location_id
+#                    references: location(id)
+#              - column:
+#                  name: nest_type_id
+#                  type: INT
+#                  constraints:
+#                    foreignKeyName: nest_type_id
+#                    references: nest_type(id)
+#              - column:
+#                  name: nest_dimension_id
+#                  type: INT
+#                  constraints:
+#                    foreignKeyName: nest_dimension_id
+#                    references: nest_dimension(id)
+#              - column:
+#                  name: created_at
+#                  type: TIMESTAMP
+#              - column:
+#                  name: modified_at
+#                  type: TIMESTAMP
 
         - createTable:
             tableName: observation
@@ -198,7 +198,10 @@ databaseChangeLog:
 #                    references: place(id)
               - column:
                   name: created_at
-                  type: TIMESTAMP
+                  type: timestamp without time zone
+                  defaultValue: now()
+                  constraints:
+                      nullable: false
               - column:
                   name: modified_at
                   type: TIMESTAMP

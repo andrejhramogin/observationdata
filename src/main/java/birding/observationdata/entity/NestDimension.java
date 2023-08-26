@@ -12,14 +12,10 @@ public class NestDimension {
     @Schema(description = "id number of the table 'nest_dimension'", example = "2")
     private Integer id;
 
-    @OneToOne (optional = false, mappedBy = "nestDimension")
-    private Nest nest;
-
     public NestDimension (){}
 
     public NestDimension(Integer id, Nest nest) {
         this.id = id;
-        this.nest = nest;
     }
 
     public Integer getId() {
@@ -30,11 +26,4 @@ public class NestDimension {
         this.id = id;
     }
 
-    public Nest getNest() {
-        return nest;
-    }
-
-    public void setNest(Nest nest) {
-        this.nest = nest;
-    }
 }

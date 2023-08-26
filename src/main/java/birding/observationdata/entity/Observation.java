@@ -2,17 +2,21 @@ package birding.observationdata.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "observation")
 public class Observation {
 
-    private Nest nest;
+
     @OneToOne(optional = true)
-    @JoinColumn(name = "nest_id", referencedColumnName = "id")
+    @JoinColumn(name = "id")
+    @Schema(description = "ID of table 'nest'", example = "1")
+    private Nest nest;
 
     public Nest getNest() {
         return nest;
@@ -20,10 +24,6 @@ public class Observation {
     public void setNest(Nest nest) {
         this.nest = nest;
     }
-
-    @Column(name = "nest_id")
-    @Schema(description = "ID of table 'nest'", example = "1")
-    private Integer nestId;
 
     @Id
     @Column(name = "id", insertable = false)
@@ -68,11 +68,12 @@ public class Observation {
     private int placeId;
 
 
+    @CreationTimestamp
     @Column(name = "created_at", insertable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
-            example = "2022-10-03 10:20:11.114")
-    private Timestamp createdAt;
+    example = "2022-10-03 10:20:11.114")
+    private LocalDateTime createdAt;
 
     @Column(name = "modified_at", insertable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -82,28 +83,20 @@ public class Observation {
 
     public Observation(){}
 
-    public Observation(Integer id, Date date, int quantity, String description,
-                       Integer nestId, int speciesId, int userId, int placeId,
-                       Timestamp createdAt, Timestamp modifiedAt) {
-        this.id = id;
-        this.date = date;
-        this.quantity = quantity;
-        this.description = description;
-        this.nestId = nestId;
-        this.speciesId = speciesId;
-        this.userId = userId;
-        this.placeId = placeId;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-    }
-
-    public Integer getNestId() {
-        return nestId;
-    }
-
-    public void setNestId(Integer nestId){
-        this.nestId=nestId;
-    }
+//    public Observation(Integer id, Date date, int quantity, String description,
+//                       Integer nestId, int speciesId, int userId, int placeId,
+//                       LocalDateTime createdAt, Timestamp modifiedAt, Nest nest) {
+//        this.id = id;
+//        this.date = date;
+//        this.quantity = quantity;
+//        this.description = description;
+//        this.speciesId = speciesId;
+//        this.userId = userId;
+//        this.placeId = placeId;
+//        this.createdAt = createdAt;
+//        this.modifiedAt = modifiedAt;
+//        this.nest = nest;
+//    }
 
     public Integer getId() {
         return id;
@@ -163,11 +156,11 @@ public class Observation {
         this.placeId = placeId;
     }
 
-    public Timestamp getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 

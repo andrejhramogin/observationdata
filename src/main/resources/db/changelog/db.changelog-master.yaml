@@ -60,6 +60,7 @@ databaseChangeLog:
                   name: type
                   type: varchar
 
+
         - createTable:
             tableName: location
             columns:
@@ -76,6 +77,7 @@ databaseChangeLog:
 
         - createTable:
             tableName: nest_type
+            remarks: тип гнезда (чаша, шар, закрытое)
             columns:
               - column:
                   name: id
@@ -87,6 +89,42 @@ databaseChangeLog:
               - column:
                   name: type
                   type: varchar
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: type
+                  value: cap
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: type
+                  value: spherical
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: type
+                  value:
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: type
+                  value: closed
 
         - createTable:
             tableName: nest_dimension
@@ -151,6 +189,7 @@ databaseChangeLog:
 
         - createTable:
             tableName: observation
+            remarks: основная таблица для наблюдений
             columns:
               - column:
                   name: id
@@ -204,4 +243,7 @@ databaseChangeLog:
                       nullable: false
               - column:
                   name: modified_at
-                  type: TIMESTAMP
+                  type: timestamp without time zone
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

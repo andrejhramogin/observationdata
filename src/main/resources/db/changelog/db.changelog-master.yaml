@@ -115,15 +115,6 @@ databaseChangeLog:
                   value: 3
               - column:
                   name: type
-                  value:
-        - insert:
-            tableName: nest_type
-            columns:
-              - column:
-                  name: id
-                  value: 2
-              - column:
-                  name: type
                   value: closed
 
         - createTable:

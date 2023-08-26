@@ -16,15 +16,11 @@ public class NestType {
     @Schema(description = "description of the nest type", example = "cup - shaped")
     private String type;
 
-    @OneToOne(optional = false, mappedBy = "nestType")
-    private Nest nest;
-
     public NestType(){}
 
     public NestType(int id, String type, Nest nest) {
         this.id = id;
         this.type = type;
-        this.nest = nest;
     }
 
     public int getId() {
@@ -41,13 +37,5 @@ public class NestType {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public Nest getNest() {
-        return nest;
-    }
-
-    public void setNest(Nest nest) {
-        this.nest = nest;
     }
 }

@@ -17,15 +17,11 @@ public class Location {
             example = "Ground")
     private String type;
 
-    @OneToOne(optional = false, mappedBy = "location")
-    private Nest nest;
-
     public Location(){}
 
     public Location(int id, String type, Nest nest) {
         this.id = id;
         this.type = type;
-        this.nest = nest;
     }
 
     public int getId() {
@@ -42,13 +38,5 @@ public class Location {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public Nest getNest() {
-        return nest;
-    }
-
-    public void setNest(Nest nest) {
-        this.nest = nest;
     }
 }

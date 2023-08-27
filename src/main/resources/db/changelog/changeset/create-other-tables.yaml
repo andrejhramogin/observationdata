@@ -1,0 +1,60 @@
+databaseChangeLog:
+- changeSet:
+    id: create-tables
+    author: Hramogin_Andrej
+    changes:
+      - createTable:
+          tableName: biotope
+          remarks: биотоп (лес, поле и т.п.)
+          columns:
+            - column:
+                name: id
+                type: INT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: type
+                type: varchar
+
+      - createTable:
+          tableName: location
+          remarks: место расположения гнезда (на земле, на дереве и т.п.)
+          columns:
+            - column:
+                name: id
+                type: INT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: type
+                type: varchar
+
+      - createTable:
+          tableName: nest_type
+          remarks: тип гнезда (чаша, шар, закрытое)
+          columns:
+            - column:
+                name: id
+                type: INT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: type
+                type: varchar
+
+      - createTable:
+          tableName: nest_dimension
+          columns:
+            - column:
+                name: id
+                type: INT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false

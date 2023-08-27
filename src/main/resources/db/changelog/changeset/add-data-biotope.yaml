@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-data-biotope
+      author: Hramogin_Andrej
+      changes:
+        - insert:
+            tableName: biotope
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: type
+                  value: поле
+        - insert:
+            tableName: biotope
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: type
+                  value: лес
+        - insert:
+            tableName: biotope
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: type
+                  value: болото
+        - insert:
+            tableName: biotope
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: type
+                  value: озеро
+        - insert:
+            tableName: biotope
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: type
+                  value: река

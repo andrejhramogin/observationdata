@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-data-location
+      author: Hramogin_Andrej
+      changes:
+        - insert:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: type
+                  value: на земле
+        - insert:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: type
+                  value: на дереве
+        - insert:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: type
+                  value: дупло
+        - insert:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: type
+                  value: на воде
+        - insert:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: type
+                  value: нора

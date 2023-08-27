@@ -13,11 +13,11 @@ public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private ObservationJpaRepository obsJpaRepository;
 
-//    public ObservationServiceImpl(ObservationJpaRepository obsJpaRepository) {
-//        this.obsJpaRepository = obsJpaRepository;
-//    }
+    public ObservationServiceImpl(ObservationJpaRepository obsJpaRepository) {
+        this.obsJpaRepository = obsJpaRepository;
+    }
 
-    public ObservationServiceImpl() {
+    public ObservationServiceImpl(){
     }
 
     @Override

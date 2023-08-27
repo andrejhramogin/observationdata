@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-nest
+      author: Hramogin_Andrej
+      changes:
+        - createTable:
+            tableName: nest
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: eggs_quantity
+                  type: INT
+        #              - column:
+        #                  name: chicks_quantity
+        #                  type: INT
+        #              - column:
+        #                  name: description
+        #                  type: varchar
+        #              - column:
+        #                  name: biotope_id
+        #                  type: INT
+        #                  constraints:
+        #                    foreignKeyName: biotope_id
+        #                    references: biotope(id)
+        #              - column:
+        #                  name: location_id
+        #                  type: INT
+        #                  constraints:
+        #                    foreignKeyName: location_id
+        #                    references: location(id)
+        #              - column:
+        #                  name: nest_type_id
+        #                  type: INT
+        #                  constraints:
+        #                    foreignKeyName: nest_type_id
+        #                    references: nest_type(id)
+        #              - column:
+        #                  name: nest_dimension_id
+        #                  type: INT
+        #                  constraints:
+        #                    foreignKeyName: nest_dimension_id
+        #                    references: nest_dimension(id)
+        #              - column:
+        #                  name: created_at
+        #                  type: TIMESTAMP
+        #              - column:
+        #                  name: modified_at
+        #                  type: TIMESTAMP

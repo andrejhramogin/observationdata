@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-data-nest_type
+      author: Hramogin_Andrej
+      changes:
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: type
+                  value: чашеобразное
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: type
+                  value: шарообразное
+        - insert:
+            tableName: nest_type
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: type
+                  value: шалашеобразное

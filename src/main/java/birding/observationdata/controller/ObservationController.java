@@ -33,6 +33,8 @@ public class ObservationController {
         return observationService.findObservationById(id);
     }
 
+
+
     @DeleteMapping("/observation/{id}")
     @Operation(summary = "Delete observation", description = "Delete observation with the id number from table 'observation'")
     @ApiResponse(responseCode = "200", description = "observation from the table 'cars' were deleted successfully")

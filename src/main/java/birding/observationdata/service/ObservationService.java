@@ -14,5 +14,5 @@ public interface ObservationService {
 
     Observation updateObservation(Observation observation, int id);
 
-    List<Observation> getObservationWithSortingAndFiltration();
+    List<Observation> getAllObservation();
 }

@@ -33,17 +33,26 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public Observation findObservationById(int id) {
+        return obsJpaRepository.findById(id)
+                .orElseThrow(
+                ()-> new ResourceNotFoundException("Observation with id " + id + " not found"));
+    }
+
+    @Override
+    public Observation updateObservation(Observation obs, int id) {
+        if (obsJpaRepository.existsById(id)) {
+            Observation newObs = obs;
+            Observation updatedObs = obsJpaRepository.getReferenceById(id);
+            newObs.setId(updatedObs.getId());
+            obsJpaRepository.save(newObs);
+            return findObservationById(updatedObs.getId());
+        }
         return obsJpaRepository.findById(id).orElseThrow(
                 ()-> new ResourceNotFoundException("Observation with id " + id + " not found"));
     }
 
     @Override
-    public Observation updateObservation(Observation observation, int id) {
-        return null;
-    }
-
-    @Override
-    public List<Observation> getObservationWithSortingAndFiltration() {
-        return null;
+    public List<Observation> getAllObservation() {
+        return obsJpaRepository.findAll();
     }
 }

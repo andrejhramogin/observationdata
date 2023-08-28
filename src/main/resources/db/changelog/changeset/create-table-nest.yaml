@@ -22,12 +22,12 @@ databaseChangeLog:
         #              - column:
         #                  name: description
         #                  type: varchar
-        #              - column:
-        #                  name: biotope_id
-        #                  type: INT
-        #                  constraints:
-        #                    foreignKeyName: biotope_id
-        #                    references: biotope(id)
+              - column:
+                  name: biotope_id
+                  type: INT
+                  constraints:
+                    foreignKeyName: biotope_id
+                    references: biotope(id)
         #              - column:
         #                  name: location_id
         #                  type: INT

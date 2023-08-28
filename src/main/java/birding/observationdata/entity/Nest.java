@@ -28,10 +28,10 @@ public class Nest {
 //            example = "A nest on the ground near tree")
 //    private String description;
 //
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "biotope_id")
-//    @Schema(description = "ID of table 'biotope'", example = "?")
-//    private Biotope biotope;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "biotope_id")
+    @Schema(description = "ID of table 'biotope'", example = "?")
+    private Biotope biotope;
 //
 //    @OneToOne(optional = false)
 //    @JoinColumn(name = "location_id")
@@ -59,11 +59,11 @@ public class Nest {
 //    private Timestamp modifiedAt;
 
     public Nest(){}
-    public Nest(Integer id, int eggsQuantity) {
-        this.id = id;
-        this.eggsQuantity = eggsQuantity;
-
-    }
+//    public Nest(Integer id, int eggsQuantity) {
+//        this.id = id;
+//        this.eggsQuantity = eggsQuantity;
+//
+//    }
 //    public Nest(Integer id, int eggsQuantity, int chicksNumber,
 //                String description, Biotope biotope, Location location,
 //                NestType nestType, NestDimension nestDimension,
@@ -112,13 +112,13 @@ public class Nest {
 //        this.description = description;
 //    }
 //
-//    public Biotope getBiotope() {
-//        return biotope;
-//    }
-//
-//    public void setBiotope(Biotope biotope) {
-//        this.biotope = biotope;
-//    }
+    public Biotope getBiotope() {
+        return biotope;
+    }
+
+    public void setBiotope(Biotope biotope) {
+        this.biotope = biotope;
+    }
 //
 //    public Location getLocation() {
 //        return location;

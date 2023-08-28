@@ -1,17 +1,23 @@
 package birding.observationdata.service;
 
+import birding.observationdata.dto.mapper.ObservationMapper;
+import birding.observationdata.dto.request.DtoObservationRq;
+import birding.observationdata.dto.response.DtoObservationRsp;
 import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Component
 public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private ObservationJpaRepository obsJpaRepository;
+    @Autowired
+    ObservationMapper mapper;
 
     public ObservationServiceImpl(ObservationJpaRepository obsJpaRepository) {
         this.obsJpaRepository = obsJpaRepository;
@@ -21,38 +27,39 @@ public class ObservationServiceImpl implements ObservationService {
     }
 
     @Override
-    public Observation createNewObservation(Observation observation) {
-        Observation newObs = obsJpaRepository.save(observation);
+    public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
+        Observation newObs = obsJpaRepository.save(mapper.dtoToEntity(dto));
         return findObservationById(newObs.getId());
     }
-
     @Override
     public void deleteObservationById(int id) {
         obsJpaRepository.deleteById(id);
     }
 
     @Override
-    public Observation findObservationById(int id) {
-        return obsJpaRepository.findById(id)
+    public DtoObservationRsp findObservationById(int id) {
+        return mapper.entityToDto(obsJpaRepository.findById(id)
                 .orElseThrow(
-                ()-> new ResourceNotFoundException("Observation with id " + id + " not found"));
+                ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
-
     @Override
-    public Observation updateObservation(Observation obs, int id) {
+    public DtoObservationRsp updateObservation(DtoObservationRq obs, int id) {
         if (obsJpaRepository.existsById(id)) {
-            Observation newObs = obs;
+            Observation newObs = mapper.dtoToEntity(obs);
             Observation updatedObs = obsJpaRepository.getReferenceById(id);
             newObs.setId(updatedObs.getId());
+            newObs.setCreatedAt(updatedObs.getCreatedAt());
+            newObs.setModifiedAt(new Timestamp(System.currentTimeMillis()));
             obsJpaRepository.save(newObs);
             return findObservationById(updatedObs.getId());
         }
-        return obsJpaRepository.findById(id).orElseThrow(
-                ()-> new ResourceNotFoundException("Observation with id " + id + " not found"));
+        return mapper.entityToDto(obsJpaRepository.findById(id).orElseThrow(
+                ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
-
     @Override
-    public List<Observation> getAllObservation() {
-        return obsJpaRepository.findAll();
+    public List<DtoObservationRsp> getAllObservation() {
+        return obsJpaRepository.findAll().stream()
+                .map(mapper::entityToDto)
+                .toList();
     }
 }

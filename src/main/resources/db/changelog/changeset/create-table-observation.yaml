@@ -36,19 +36,22 @@ databaseChangeLog:
               - column:
                   name: species_id
                   type: INT
-              #                  constraints:
+                  constraints:
+                    nullable: false
               #                    foreignKeyName: species_id
               #                    references: species(id)
               - column:
                   name: user_id
                   type: INT
-              #                  constraints:
+                  constraints:
+                    nullable: false
               #                    foreignKeyName: user_id
               #                    references: user(id)
               - column:
                   name: place_id
                   type: INT
-              #                  constraints:
+                  constraints:
+                    nullable: false
               #                    foreignKeyName: place_id
               #                    references: place(id)
               - column:

@@ -1,18 +1,20 @@
 package birding.observationdata.service;
 
+import birding.observationdata.dto.request.DtoObservationRq;
+import birding.observationdata.dto.response.DtoObservationRsp;
 import birding.observationdata.entity.Observation;
 
 import java.util.List;
 
 public interface ObservationService {
 
-    Observation createNewObservation(Observation observation);
+    DtoObservationRsp createNewObservation(DtoObservationRq observation);
 
     void deleteObservationById(int id);
 
-    Observation findObservationById(int id);
+    DtoObservationRsp findObservationById(int id);
 
-    Observation updateObservation(Observation observation, int id);
+    DtoObservationRsp updateObservation(DtoObservationRq rqObs, int id);
 
-    List<Observation> getAllObservation();
+    List<DtoObservationRsp> getAllObservation();
 }

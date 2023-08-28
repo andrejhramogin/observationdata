@@ -2,7 +2,7 @@ package birding.observationdata.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
-
+// не реализовано
 @Entity
 @Table(name = "nest_dimension")
 public class NestDimension {

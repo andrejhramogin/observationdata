@@ -3,8 +3,6 @@ package birding.observationdata.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
-import java.sql.Timestamp;
-
 @Entity
 @Table(name = "nest")
 public class Nest {
@@ -15,7 +13,7 @@ public class Nest {
             example = "1")
     private Integer id;
 
-    @Column
+    @Column(name="eggs_quantity")
     @Schema(name = "eggs_quantity", example = "4")
     private int eggsQuantity;
 
@@ -29,10 +27,10 @@ public class Nest {
 //    private String description;
 //
     @OneToOne(optional = false)
-    @JoinColumn(name = "biotope_id")
+    @JoinColumn(name = "biotope_id", referencedColumnName = "id")
     @Schema(description = "ID of table 'biotope'", example = "?")
     private Biotope biotope;
-//
+
 //    @OneToOne(optional = false)
 //    @JoinColumn(name = "location_id")
 //    @Schema(description = "ID of the table 'location'", example = "?")
@@ -59,26 +57,6 @@ public class Nest {
 //    private Timestamp modifiedAt;
 
     public Nest(){}
-//    public Nest(Integer id, int eggsQuantity) {
-//        this.id = id;
-//        this.eggsQuantity = eggsQuantity;
-//
-//    }
-//    public Nest(Integer id, int eggsQuantity, int chicksNumber,
-//                String description, Biotope biotope, Location location,
-//                NestType nestType, NestDimension nestDimension,
-//                Timestamp createdAt, Timestamp modifiedAt) {
-//        this.id = id;
-//        this.eggsQuantity = eggsQuantity;
-//        this.chicksNumber = chicksNumber;
-//        this.description = description;
-//        this.biotope = biotope;
-//        this.location = location;
-//        this.nestType = nestType;
-//        this.nestDimension = nestDimension;
-//        this.createdAt = createdAt;
-//        this.modifiedAt = modifiedAt;
-//    }
 
     public Integer getId() {
         return id;
@@ -119,7 +97,8 @@ public class Nest {
     public void setBiotope(Biotope biotope) {
         this.biotope = biotope;
     }
-//
+
+    //
 //    public Location getLocation() {
 //        return location;
 //    }

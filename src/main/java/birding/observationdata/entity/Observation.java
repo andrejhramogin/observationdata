@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -22,7 +23,7 @@ public class Observation {
     @Column(name = "date", nullable = false)
     @Schema(description = "date of observation",
             example = "2023-08-14")
-    private Date date;
+    private LocalDate date;
 
     @Column(name = "quantity", nullable = false)
     @Schema(description = "number of birds",
@@ -68,19 +69,18 @@ public class Observation {
     //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
     example = "2022-10-03 10:20:11.114")
-    private LocalDateTime createdAt;
+    private Timestamp createdAt;
 
     @CreationTimestamp
     @Column(name = "modified_at", insertable = false)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
-
     public Observation(){}
 
-    public Observation(Integer id, Date date, int quantity, String description,
+    public Observation(Integer id, LocalDate date, int quantity, String description,
                        int nestId, int speciesId, int userId, int placeId,
-                       LocalDateTime createdAt, Timestamp modifiedAt) {
+                       Timestamp createdAt, Timestamp modifiedAt) {
         this.id = id;
         this.date = date;
         this.quantity = quantity;
@@ -102,11 +102,11 @@ public class Observation {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -158,11 +158,11 @@ public class Observation {
         this.placeId = placeId;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public Timestamp getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
 

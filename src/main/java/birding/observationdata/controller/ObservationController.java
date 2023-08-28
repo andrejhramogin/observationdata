@@ -1,5 +1,7 @@
 package birding.observationdata.controller;
 
+import birding.observationdata.dto.request.DtoObservationRq;
+import birding.observationdata.dto.response.DtoObservationRsp;
 import birding.observationdata.entity.Observation;
 import birding.observationdata.service.ObservationService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -24,7 +26,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public Observation createObservation (@RequestBody Observation observation){
+    public DtoObservationRsp createObservation (@Valid @RequestBody DtoObservationRq observation){
         return observationService.createNewObservation(observation);
     }
 
@@ -34,7 +36,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public Observation getObsById(@PathVariable int id){
+    public DtoObservationRsp getObsById(@PathVariable int id){
         return observationService.findObservationById(id);
     }
 
@@ -43,7 +45,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "200", description = "observation from the table 'observations' were received successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public List<Observation> getAllObservation(){
+    public List<DtoObservationRsp> getAllObservation(){
         return observationService.getAllObservation();
     }
 
@@ -52,8 +54,8 @@ public class ObservationController {
     @ApiResponse(responseCode = "200", description = "A observation was updated successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public Observation putObservation (@RequestBody Observation observation, @PathVariable int id){
-        return observationService.updateObservation(observation, id);
+    public DtoObservationRsp putObservation (@Valid @RequestBody DtoObservationRq rqObs, @PathVariable int id){
+        return observationService.updateObservation(rqObs, id);
     }
 
     @DeleteMapping("/observation/{id}")

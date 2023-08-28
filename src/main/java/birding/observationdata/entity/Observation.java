@@ -78,22 +78,6 @@ public class Observation {
     private Timestamp modifiedAt;
     public Observation(){}
 
-    public Observation(Integer id, LocalDate date, int quantity, String description,
-                       int nestId, int speciesId, int userId, int placeId,
-                       Timestamp createdAt, Timestamp modifiedAt) {
-        this.id = id;
-        this.date = date;
-        this.quantity = quantity;
-        this.description = description;
-        this.nestId = nestId;
-        this.speciesId = speciesId;
-        this.userId = userId;
-        this.placeId = placeId;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-    }
-
-
     public Integer getId() {
         return id;
     }

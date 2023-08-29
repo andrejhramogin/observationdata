@@ -7,43 +7,36 @@ import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.UUID;
 
-@Component
+@Service
 public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private ObservationJpaRepository obsJpaRepository;
     @Autowired
-    ObservationMapper mapper;
-
-    public ObservationServiceImpl(ObservationJpaRepository obsJpaRepository) {
-        this.obsJpaRepository = obsJpaRepository;
-    }
-
-    public ObservationServiceImpl(){
-    }
+    private ObservationMapper mapper;
 
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
-        Observation newObs = obsJpaRepository.save(mapper.dtoToEntity(dto));
-        return findObservationById(newObs.getId());
+        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
     @Override
-    public void deleteObservationById(int id) {
+    public void deleteObservationById(UUID id) {
         obsJpaRepository.deleteById(id);
     }
 
     @Override
-    public DtoObservationRsp findObservationById(int id) {
+    public DtoObservationRsp findObservationById(UUID id) {
         return mapper.entityToDto(obsJpaRepository.findById(id)
                 .orElseThrow(
                         ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
     @Override
-    public DtoObservationRsp updateObservation(DtoObservationRq obs, int id) {
+    public DtoObservationRsp updateObservation(DtoObservationRq obs, UUID id) {
         if (obsJpaRepository.existsById(id)) {
             Observation newObs = mapper.dtoToEntity(obs);
             Observation updatedObs = obsJpaRepository.getReferenceById(id);
@@ -58,8 +51,9 @@ public class ObservationServiceImpl implements ObservationService {
     }
     @Override
     public List<DtoObservationRsp> getAllObservation() {
-        return obsJpaRepository.findAll().stream()
-                .map(mapper::entityToDto)
-                .toList();
+//        return obsJpaRepository.findAll().stream()
+//                .map(mapper::entityToDto)
+//                .toList();
+        return mapper.listEntityToDto(obsJpaRepository.findAll());
     }
 }

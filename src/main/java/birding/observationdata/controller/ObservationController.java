@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @Tag(name = "Observation API")
@@ -35,7 +36,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public DtoObservationRsp getObsById(@PathVariable int id){
+    public DtoObservationRsp getObsById(@PathVariable UUID id){
         return observationService.findObservationById(id);
     }
 
@@ -53,7 +54,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "200", description = "A observation was updated successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public DtoObservationRsp putObservation (@Valid @RequestBody DtoObservationRq rqObs, @PathVariable int id){
+    public DtoObservationRsp putObservation (@Valid @RequestBody DtoObservationRq rqObs, @PathVariable UUID id){
         return observationService.updateObservation(rqObs, id);
     }
 
@@ -63,7 +64,7 @@ public class ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public void deleteObsById(@PathVariable int id){
+    public void deleteObsById(@PathVariable UUID id){
         observationService.deleteObservationById(id);
     }
 }

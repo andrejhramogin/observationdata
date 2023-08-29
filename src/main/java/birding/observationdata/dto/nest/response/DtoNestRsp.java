@@ -1,17 +1,19 @@
 package birding.observationdata.dto.nest.response;
 
+import java.util.UUID;
+
 public class DtoNestRsp {
-    private int id;
+    private UUID id;
     private int eggsQuantity;
-    private int biotopeId;
+    private UUID biotopeId;
 
     public DtoNestRsp(){}
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -23,11 +25,11 @@ public class DtoNestRsp {
         this.eggsQuantity = eggsQuantity;
     }
 
-    public int getBiotopeId() {
+    public UUID getBiotopeId() {
         return biotopeId;
     }
 
-    public void setBiotopeId(int biotopeId) {
+    public void setBiotopeId(UUID biotopeId) {
         this.biotopeId = biotopeId;
     }
 }

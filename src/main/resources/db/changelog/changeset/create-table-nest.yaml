@@ -8,11 +8,11 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: INT
-                  autoIncrement: true
+                  type: UUID
                   constraints:
                     primaryKey: true
                     nullable: false
+#                    default: uuid_generate_v1mc()
               - column:
                   name: eggs_quantity
                   type: INT
@@ -24,7 +24,7 @@ databaseChangeLog:
         #                  type: varchar
               - column:
                   name: biotope_id
-                  type: INT
+                  type: UUID
                   constraints:
                     foreignKeyName: biotope_id
                     references: biotope(id)

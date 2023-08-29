@@ -3,15 +3,18 @@ package birding.observationdata.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "nest")
+
 public class Nest {
     @Id
     @Column(name = "id", insertable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Schema(description = "id number in 'observation' nest",
             example = "1")
-    private Integer id;
+    private UUID id;
 
     @Column(name="eggs_quantity")
     @Schema(name = "eggs_quantity", example = "4")
@@ -56,13 +59,11 @@ public class Nest {
 //            example = "2022-10-03 10:20:11.114")
 //    private Timestamp modifiedAt;
 
-    public Nest(){}
-
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

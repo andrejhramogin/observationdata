@@ -3,30 +3,27 @@ package birding.observationdata.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "biotope")
 public class Biotope {
     @Id
     @Column(name = "id", insertable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "id number of table 'biotope'", example = "1")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Schema(description = "id number of table 'biotope'", example = "ea134510-c81c-4d27-a497-2b83d0e970d3")
+    private UUID id;
 
     @Column(name = "type")
     @Schema(description = "description of the biotope",
             example = "Forest")
     private String type;
 
-    @OneToOne(optional = false, mappedBy = "biotope")
-    private Nest nest;
-
-    public Biotope(){}
-
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -38,11 +35,4 @@ public class Biotope {
         this.type = type;
     }
 
-    public Nest getNest() {
-        return nest;
-    }
-
-    public void setNest(Nest nest) {
-        this.nest = nest;
-    }
 }

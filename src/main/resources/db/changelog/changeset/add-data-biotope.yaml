@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  value: d6c5c118-4a33-42d1-8488-652f7e642196
               - column:
                   name: type
                   value: поле
@@ -17,7 +17,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  value: 4c4ae429-cdcc-4624-a8a2-1099943140e5
               - column:
                   name: type
                   value: лес
@@ -26,7 +26,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 3
+                  value: b04de5d1-95d4-462a-9644-cdfd52b65c55
               - column:
                   name: type
                   value: болото
@@ -35,7 +35,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 4
+                  value: 6a61b1f4-7dcd-4b79-a344-5f246fabe024
               - column:
                   name: type
                   value: озеро
@@ -44,7 +44,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 5
+                  value: 6897c0e0-d8a8-45d7-937c-02ec06343335
               - column:
                   name: type
                   value: река

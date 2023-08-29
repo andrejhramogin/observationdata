@@ -6,32 +6,26 @@ import birding.observationdata.entity.Nest;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.mapper.NestMapper;
 import birding.observationdata.repository.NestJpaRepository;
-import birding.observationdata.repository.ObservationJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
-@Component
+@Service
 public class NestServiceImpl implements NestService{
     @Autowired
-    NestJpaRepository nestJpaRepository;
+    private NestJpaRepository nestJpaRepository;
     @Autowired
-    NestMapper mapper;
-
-    public NestServiceImpl(NestJpaRepository nestJpaRepository){
-        this.nestJpaRepository = nestJpaRepository;
-    }
-    public NestServiceImpl(){}
+    private NestMapper mapper;
 
     @Override
     public DtoNestRsp createNewNest(DtoNestRq dto) {
-        Nest newNest = nestJpaRepository.save(mapper.dtoToEntity(dto));
-        return findNestById(newNest.getId());
+        return mapper.entityToDto(nestJpaRepository.save(mapper.dtoToEntity(dto)));
     }
 
     @Override
-    public DtoNestRsp findNestById(int id) {
+    public DtoNestRsp findNestById(UUID id) {
         return mapper.entityToDto(nestJpaRepository.findById(id)
                 .orElseThrow(
                         ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));

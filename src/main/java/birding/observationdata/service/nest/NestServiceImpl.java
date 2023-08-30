@@ -2,6 +2,7 @@ package birding.observationdata.service.nest;
 
 import birding.observationdata.dto.nest.request.DtoNestRq;
 import birding.observationdata.dto.nest.response.DtoNestRsp;
+import birding.observationdata.entity.Biotope;
 import birding.observationdata.entity.Nest;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.mapper.NestMapper;
@@ -23,13 +24,16 @@ public class NestServiceImpl implements NestService{
     BiotopService biotopService;
     @Override
     public DtoNestRsp createNewNest(DtoNestRq dto) {
+        //При POST запрое: в БД помещает правильно, но НЕ ВОЗВРАЩАЕТ на фронт biotop type.
+//        return mapper.entityToDto(nestJpaRepository.save(mapper.dtoToEntity(dto)));
 
+        //При POST запросе: в БД помещает правильно и возвращает на фронт biotop type.
         Nest nest = mapper.dtoToEntity(dto);
-        nest.setBiotope(biotopService.findBiotopeById(dto.getBiotopeId()));
-        nestJpaRepository.save(nest);
+        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.save(nest));
 
-        DtoNestRsp nestRsp = mapper.entityToDto(nest);
-        nestRsp.setBiotopeId(nest.getBiotope().getId());
+        //по id из request находим в таблице biotop соответствующую строку
+        Biotope biotope = biotopService.findBiotopeById(nest.getBiotope().getId());
+        nestRsp.getBiotope().setType(biotope.getType());
         return nestRsp;
     }
 

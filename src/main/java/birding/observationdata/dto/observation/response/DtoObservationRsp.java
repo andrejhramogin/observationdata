@@ -2,29 +2,28 @@ package birding.observationdata.dto.observation.response;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class DtoObservationRsp {
 
-    private Integer id;
+    private UUID id;
     private LocalDate date;
     private int quantity;
     private String description;
 
 //    private Nest nest;
-    private int nestId;
+    private UUID nestId;
     private int speciesId;
     private int userId;
     private int placeId;
     private Timestamp createdAt;
     private Timestamp modifiedAt;
 
-    public DtoObservationRsp(){}
-
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -52,11 +51,11 @@ public class DtoObservationRsp {
         this.description = description;
     }
 
-    public int getNestId() {
+    public UUID getNestId() {
         return nestId;
     }
 
-    public void setNestId(int nestId) {
+    public void setNestId(UUID nestId) {
         this.nestId = nestId;
     }
 

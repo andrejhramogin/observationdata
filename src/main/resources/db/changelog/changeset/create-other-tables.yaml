@@ -9,14 +9,14 @@ databaseChangeLog:
           columns:
             - column:
                 name: id
-                type: INT
-                autoIncrement: true
+                type: UUID
                 constraints:
                   primaryKey: true
                   nullable: false
+                  default: uuid_generate_v1mc()
             - column:
                 name: type
-                type: varchar
+                type: varchar(50)
 
       - createTable:
           tableName: location
@@ -24,14 +24,14 @@ databaseChangeLog:
           columns:
             - column:
                 name: id
-                type: INT
-                autoIncrement: true
+                type: UUID
                 constraints:
                   primaryKey: true
                   nullable: false
+                  default: uuid_generate_v1mc()
             - column:
                 name: type
-                type: varchar
+                type: varchar(50)
 
       - createTable:
           tableName: nest_type
@@ -39,22 +39,22 @@ databaseChangeLog:
           columns:
             - column:
                 name: id
-                type: INT
-                autoIncrement: true
+                type: UUID
                 constraints:
                   primaryKey: true
                   nullable: false
+                  default: uuid_generate_v1mc()
             - column:
                 name: type
-                type: varchar
+                type: varchar(50)
 
       - createTable:
           tableName: nest_dimension
           columns:
             - column:
                 name: id
-                type: INT
-                autoIncrement: true
+                type: UUID
                 constraints:
                   primaryKey: true
                   nullable: false
+                  default: uuid_generate_v1mc()

@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  value: 69b8920a-8c34-4b78-b01b-cd3ba9dd9034
               - column:
                   name: type
                   value: на земле
@@ -17,7 +17,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  value: 4bcda65c-57f1-4759-a2ca-fa38efa17bbe
               - column:
                   name: type
                   value: на дереве
@@ -26,7 +26,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 3
+                  value: 8f0566b2-8c30-4d4b-919c-f50d6fca2e8b
               - column:
                   name: type
                   value: дупло
@@ -35,7 +35,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 4
+                  value: 27c58c97-823e-4d23-8020-b824630add06
               - column:
                   name: type
                   value: на воде
@@ -44,7 +44,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 5
+                  value: a9155655-196d-43d5-8d6f-3a852ce22df5
               - column:
                   name: type
                   value: нора

@@ -4,16 +4,17 @@ import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface ObservationService {
 
     DtoObservationRsp createNewObservation(DtoObservationRq observation);
 
-    void deleteObservationById(int id);
+    void deleteObservationById(UUID id);
 
-    DtoObservationRsp findObservationById(int id);
+    DtoObservationRsp findObservationById(UUID id);
 
-    DtoObservationRsp updateObservation(DtoObservationRq rqObs, int id);
+    DtoObservationRsp updateObservation(DtoObservationRq rqObs, UUID id);
 
     List<DtoObservationRsp> getAllObservation();
 }

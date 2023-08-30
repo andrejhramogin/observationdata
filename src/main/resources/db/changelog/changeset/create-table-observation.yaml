@@ -9,8 +9,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: INT
-                  autoIncrement: true
+                  type: UUID
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -26,10 +25,10 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: description
-                  type: varchar
+                  type: varchar(500)
               - column:
                   name: nest_id
-                  type: INT
+                  type: UUID
                   constraints:
                     foreignKeyName: nest_id
                     references: nest(id)

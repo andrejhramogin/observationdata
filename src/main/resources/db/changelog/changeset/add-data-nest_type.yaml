@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  value: d15f9237-187a-4c0f-9dff-a405b88716b5
               - column:
                   name: type
                   value: чашеобразное
@@ -17,7 +17,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  value: e0c6d24c-d6aa-4641-8fae-4d528913a67e
               - column:
                   name: type
                   value: шарообразное
@@ -26,7 +26,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 3
+                  value: 373170cc-cdcd-4cf5-889a-672ebc812eee
               - column:
                   name: type
                   value: шалашеобразное

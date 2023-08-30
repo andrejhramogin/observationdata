@@ -4,10 +4,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "observation")
@@ -15,10 +14,10 @@ public class Observation {
 
     @Id
     @Column(name = "id", insertable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Schema(description = "id number in 'observation' table",
-            example = "1")
-    private Integer id;
+            example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
+    private UUID id;
 
     @Column(name = "date", nullable = false)
     @Schema(description = "date of observation",
@@ -42,7 +41,7 @@ public class Observation {
 
     @Column(name="nest_id")
     @Schema(description = "ID of table 'nest'", example = "2")
-    private int nestId;
+    private UUID nestId;
 
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "species_id", nullable = false)
@@ -73,16 +72,16 @@ public class Observation {
 
     @CreationTimestamp
     @Column(name = "modified_at", insertable = false)
-    @Schema(description = "Date and time of the record was created",
+    @Schema(description = "Date and time of the record was modified",
             example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
     public Observation(){}
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -110,11 +109,11 @@ public class Observation {
         this.description = description;
     }
 
-    public int getNestId() {
+    public UUID getNestId() {
         return nestId;
     }
 
-    public void setNestId(int nestId) {
+    public void setNestId(UUID nestId) {
         this.nestId = nestId;
     }
 

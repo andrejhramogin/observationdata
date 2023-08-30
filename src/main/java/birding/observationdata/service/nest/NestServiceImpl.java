@@ -6,39 +6,45 @@ import birding.observationdata.entity.Nest;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.mapper.NestMapper;
 import birding.observationdata.repository.NestJpaRepository;
-import birding.observationdata.repository.ObservationJpaRepository;
+import birding.observationdata.service.biotope.BiotopService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
-@Component
+@Service
 public class NestServiceImpl implements NestService{
     @Autowired
-    NestJpaRepository nestJpaRepository;
+    private NestJpaRepository nestJpaRepository;
     @Autowired
-    NestMapper mapper;
-
-    public NestServiceImpl(NestJpaRepository nestJpaRepository){
-        this.nestJpaRepository = nestJpaRepository;
-    }
-    public NestServiceImpl(){}
-
+    private NestMapper mapper;
+    @Autowired
+    BiotopService biotopService;
     @Override
     public DtoNestRsp createNewNest(DtoNestRq dto) {
-        Nest newNest = nestJpaRepository.save(mapper.dtoToEntity(dto));
-        return findNestById(newNest.getId());
+
+        Nest nest = mapper.dtoToEntity(dto);
+        nest.setBiotope(biotopService.findBiotopeById(dto.getBiotopeId()));
+        nestJpaRepository.save(nest);
+
+        DtoNestRsp nestRsp = mapper.entityToDto(nest);
+        nestRsp.setBiotopeId(nest.getBiotope().getId());
+        return nestRsp;
     }
 
     @Override
-    public DtoNestRsp findNestById(int id) {
-        return mapper.entityToDto(nestJpaRepository.findById(id)
-                .orElseThrow(
-                        ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
+    public DtoNestRsp findNestById(UUID id) {
+        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.findById(id)
+                .orElseThrow(()-> new ResourceNotFoundException("Nest with id " + id + " not found")));
+
+        return nestRsp;
     }
 
     @Override
     public List<DtoNestRsp> getAllNest() {
-        return null;
+        return nestJpaRepository.findAll().stream()
+                .map(mapper::entityToDto)
+                .toList();
     }
 }

@@ -6,9 +6,10 @@ import birding.observationdata.service.nest.NestService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
 
 @RestController
 @Tag(name = "Nest API")
@@ -21,4 +22,13 @@ public class NestController {
         return nestService.createNewNest(nestRq);
     }
 
+    @GetMapping("/nest")
+    public List<DtoNestRsp> getAllNest(){
+        return nestService.getAllNest();
+    }
+
+    @GetMapping("/nest/{id}")
+    public DtoNestRsp getNestById(@PathVariable UUID id){
+        return nestService.findNestById(id);
+    }
 }

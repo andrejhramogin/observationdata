@@ -51,9 +51,6 @@ public class ObservationServiceImpl implements ObservationService {
     }
     @Override
     public List<DtoObservationRsp> getAllObservation() {
-//        return obsJpaRepository.findAll().stream()
-//                .map(mapper::entityToDto)
-//                .toList();
         return mapper.listEntityToDto(obsJpaRepository.findAll());
     }
 }

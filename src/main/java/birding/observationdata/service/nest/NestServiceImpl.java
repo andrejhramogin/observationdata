@@ -6,6 +6,7 @@ import birding.observationdata.entity.Nest;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.mapper.NestMapper;
 import birding.observationdata.repository.NestJpaRepository;
+import birding.observationdata.service.biotope.BiotopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,21 +19,32 @@ public class NestServiceImpl implements NestService{
     private NestJpaRepository nestJpaRepository;
     @Autowired
     private NestMapper mapper;
-
+    @Autowired
+    BiotopService biotopService;
     @Override
     public DtoNestRsp createNewNest(DtoNestRq dto) {
-        return mapper.entityToDto(nestJpaRepository.save(mapper.dtoToEntity(dto)));
+
+        Nest nest = mapper.dtoToEntity(dto);
+        nest.setBiotope(biotopService.findBiotopeById(dto.getBiotopeId()));
+        nestJpaRepository.save(nest);
+
+        DtoNestRsp nestRsp = mapper.entityToDto(nest);
+        nestRsp.setBiotopeId(nest.getBiotope().getId());
+        return nestRsp;
     }
 
     @Override
     public DtoNestRsp findNestById(UUID id) {
-        return mapper.entityToDto(nestJpaRepository.findById(id)
-                .orElseThrow(
-                        ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
+        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.findById(id)
+                .orElseThrow(()-> new ResourceNotFoundException("Nest with id " + id + " not found")));
+
+        return nestRsp;
     }
 
     @Override
     public List<DtoNestRsp> getAllNest() {
-        return null;
+        return nestJpaRepository.findAll().stream()
+                .map(mapper::entityToDto)
+                .toList();
     }
 }

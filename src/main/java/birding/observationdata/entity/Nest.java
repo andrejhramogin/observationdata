@@ -7,7 +7,6 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "nest")
-
 public class Nest {
     @Id
     @Column(name = "id", insertable = false)
@@ -31,7 +30,7 @@ public class Nest {
 //
     @OneToOne(optional = false)
     @JoinColumn(name = "biotope_id", referencedColumnName = "id")
-    @Schema(description = "ID of table 'biotope'", example = "?")
+    @Schema(description = "ID of table 'biotope'", example = "6a61b1f4-7dcd-4b79-a344-5f246fabe024")
     private Biotope biotope;
 
 //    @OneToOne(optional = false)

@@ -24,13 +24,13 @@ public class NestServiceImpl implements NestService{
     BiotopService biotopService;
     @Override
     public DtoNestRsp createNewNest(DtoNestRq dto) {
-        //При POST запрое: в БД помещает правильно, но НЕ ВОЗВРАЩАЕТ на фронт biotop type.
+
+        //1. При POST запроcе: в БД помещает правильно, но НЕ ВОЗВРАЩАЕТ на фронт biotop type.
 //        return mapper.entityToDto(nestJpaRepository.save(mapper.dtoToEntity(dto)));
 
-        //При POST запросе: в БД помещает правильно и возвращает на фронт biotop type.
+        //2. При POST запросе: в БД помещает правильно и возвращает на фронт biotop type.
         Nest nest = mapper.dtoToEntity(dto);
         DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.save(nest));
-
         //по id из request находим в таблице biotop соответствующую строку
         Biotope biotope = biotopService.findBiotopeById(nest.getBiotope().getId());
         nestRsp.getBiotope().setType(biotope.getType());
@@ -39,16 +39,13 @@ public class NestServiceImpl implements NestService{
 
     @Override
     public DtoNestRsp findNestById(UUID id) {
-        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.findById(id)
-                .orElseThrow(()-> new ResourceNotFoundException("Nest with id " + id + " not found")));
-
-        return nestRsp;
+        return mapper.entityToDto(nestJpaRepository.findById(id)
+                .orElseThrow(
+                        ()-> new ResourceNotFoundException("Nest with id " + id + " not found")));
     }
 
     @Override
     public List<DtoNestRsp> getAllNest() {
-        return nestJpaRepository.findAll().stream()
-                .map(mapper::entityToDto)
-                .toList();
+        return mapper.listEntityToDto(nestJpaRepository.findAll());
     }
 }

@@ -16,39 +16,41 @@ databaseChangeLog:
               - column:
                   name: eggs_quantity
                   type: INT
-        #              - column:
-        #                  name: chicks_quantity
-        #                  type: INT
-        #              - column:
-        #                  name: description
-        #                  type: varchar
+              - column:
+                  name: chicks_quantity
+                  type: INT
+              - column:
+                  name: description
+                  type: varchar(500)
               - column:
                   name: biotope_id
                   type: UUID
                   constraints:
                     foreignKeyName: biotope_id
                     references: biotope(id)
-        #              - column:
-        #                  name: location_id
-        #                  type: INT
-        #                  constraints:
-        #                    foreignKeyName: location_id
-        #                    references: location(id)
-        #              - column:
-        #                  name: nest_type_id
-        #                  type: INT
-        #                  constraints:
-        #                    foreignKeyName: nest_type_id
-        #                    references: nest_type(id)
-        #              - column:
-        #                  name: nest_dimension_id
-        #                  type: INT
-        #                  constraints:
-        #                    foreignKeyName: nest_dimension_id
-        #                    references: nest_dimension(id)
-        #              - column:
-        #                  name: created_at
-        #                  type: TIMESTAMP
-        #              - column:
-        #                  name: modified_at
-        #                  type: TIMESTAMP
+              - column:
+                  name: location_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: location_id
+                    references: location(id)
+              - column:
+                  name: nest_type_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: nest_type_id
+                    references: nest_type(id)
+              - column:
+                  name: nest_dimension_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: nest_dimension_id
+                    references: nest_dimension(id)
+              - column:
+                  name: created_at
+                  type: timestamp without time zone
+                  defaultValue: now()
+              - column:
+                  name: modified_at
+                  type: timestamp without time zone
+                  defaultValue: now()

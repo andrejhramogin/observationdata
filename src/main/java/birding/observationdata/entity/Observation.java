@@ -35,6 +35,7 @@ public class Observation {
     private String description;
 
     //    @OneToOne(optional = true)
+    //TODO cascade = CascadeType.ALL?
 //    @JoinColumn(name = "id")
 //    @Schema(description = "ID of table 'nest'", example = "1")
 //    private Nest nest;

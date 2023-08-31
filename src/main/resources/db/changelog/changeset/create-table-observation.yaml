@@ -63,5 +63,5 @@ databaseChangeLog:
                   name: modified_at
                   type: timestamp without time zone
                   defaultValue: now()
-                  constraints:
+#                  constraints:
 #                    nullable: false

@@ -12,4 +12,6 @@ public interface NestMapper {
     Nest dtoToEntity(DtoNestRq nestRq);
 
     DtoNestRsp entityToDto(Nest nest);
+
+    List<DtoNestRsp> listEntityToDto(List<Nest> list);
 }

@@ -3,6 +3,7 @@ package birding.observationdata.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -51,12 +52,12 @@ public class Nest {
     private NestDimension nestDimension;
 
     @CreationTimestamp
-    @Column(name = "created_at", insertable = false)
+    @Column(name = "created_at", insertable = false, updatable = false)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
 
-    @CreationTimestamp
+    @UpdateTimestamp
     @Column(name = "modified_at", insertable = false)
     @Schema(description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")

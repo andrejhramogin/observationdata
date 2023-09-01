@@ -35,15 +35,14 @@ public class Observation {
             example = "A couple on the nest site")
     private String description;
 
-    //    @OneToOne(optional = true)
-    //TODO cascade = CascadeType.ALL?
-//    @JoinColumn(name = "id")
-//    @Schema(description = "ID of table 'nest'", example = "1")
-//    private Nest nest;
+    @OneToOne(optional = true, cascade = CascadeType.ALL)
+    @JoinColumn(name = "nest_id")
+    @Schema(description = "ID of table 'nest'", example = "1")
+    private Nest nest;
 
-    @Column(name="nest_id")
-    @Schema(description = "ID of table 'nest'", example = "2")
-    private UUID nestId;
+//    @Column(name="nest_id")
+//    @Schema(description = "ID of table 'nest'", example = "2")
+//    private UUID nestId;
 
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "species_id", nullable = false)
@@ -77,7 +76,6 @@ public class Observation {
     @Schema(description = "Date and time of the record was modified",
             example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
-    public Observation(){}
 
     public UUID getId() {
         return id;
@@ -111,12 +109,12 @@ public class Observation {
         this.description = description;
     }
 
-    public UUID getNestId() {
-        return nestId;
+    public Nest getNest() {
+        return nest;
     }
 
-    public void setNestId(UUID nestId) {
-        this.nestId = nestId;
+    public void setNest(Nest nest) {
+        this.nest = nest;
     }
 
     public int getSpeciesId() {

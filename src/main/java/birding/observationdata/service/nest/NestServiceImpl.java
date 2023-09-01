@@ -29,11 +29,19 @@ public class NestServiceImpl implements NestService{
 //        return mapper.entityToDto(nestJpaRepository.save(mapper.dtoToEntity(dto)));
 
         //2. При POST запросе: в БД помещает правильно и возвращает на фронт biotop type.
-        Nest nest = mapper.dtoToEntity(dto);
-        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.save(nest));
+//        Nest nest = mapper.dtoToEntity(dto);
+//        DtoNestRsp nestRsp = mapper.entityToDto(nestJpaRepository.save(nest));
         //по id из request находим в таблице biotop соответствующую строку
-        Biotope biotope = biotopService.findBiotopeById(nest.getBiotope().getId());
-        nestRsp.getBiotope().setType(biotope.getType());
+//        Biotope biotope = biotopService.findBiotopeById(nest.getBiotope().getId());
+//        nestRsp.getBiotope().setType(biotope.getType());
+//        return nestRsp;
+
+
+
+        Nest nest = mapper.dtoToEntity(dto);
+        var entity = nestJpaRepository.save(nest);
+        DtoNestRsp nestRsp = mapper.entityToDto(entity);
+        nestRsp.setBiotope((entity.getBiotope() ));
         return nestRsp;
     }
 

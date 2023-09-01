@@ -8,7 +8,9 @@ import java.util.UUID;
 
 public interface NestService {
     DtoNestRsp createNewNest(DtoNestRq nestRq);
+
     DtoNestRsp findNestById(UUID id);
+
     List<DtoNestRsp> getAllNest();
 }
 

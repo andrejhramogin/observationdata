@@ -22,7 +22,10 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
-        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
+        Observation observation = mapper.dtoToEntity(dto);
+        obsJpaRepository.save(observation);
+        return findObservationById(observation.getId());
+//        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
     @Override
     public void deleteObservationById(UUID id) {
@@ -41,7 +44,6 @@ public class ObservationServiceImpl implements ObservationService {
             Observation newObs = mapper.dtoToEntity(obs);
             Observation updatedObs = obsJpaRepository.getReferenceById(id);
             newObs.setId(updatedObs.getId());
-            newObs.setCreatedAt(updatedObs.getCreatedAt());
             obsJpaRepository.save(newObs);
             return findObservationById(updatedObs.getId());
         }

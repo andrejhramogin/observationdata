@@ -12,7 +12,6 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
                     nullable: false
-                    default: uuid_generate_v1mc()
               - column:
                   name: eggs_quantity
                   type: INT

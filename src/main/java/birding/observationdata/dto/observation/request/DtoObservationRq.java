@@ -1,5 +1,6 @@
 package birding.observationdata.dto.observation.request;
 
+import birding.observationdata.entity.Nest;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -22,8 +23,10 @@ public class DtoObservationRq {
         @NotBlank(message = "Description name must not be blank")
         @Schema(description = "description of the observation", example = "A couple on the nest site")
         private String description;
-//    private Nest nest;
-        private UUID nestId;
+
+        @Schema(description = "Id of table 'nest'", example = "253a3bde-b477-4731-a592-34e5a0482918")
+        private Nest nest;
+//        private UUID nestId;
         @NotNull(message = "Species id can`t be null")
         @Schema(description = "ID of table 'species'", example = "58e6ccb8-102a-4ecd-b43e-e981968cc833")
         private int speciesId;
@@ -64,12 +67,12 @@ public class DtoObservationRq {
                 this.description = description;
         }
 
-        public UUID getNestId() {
-                return nestId;
+        public Nest getNest() {
+                return nest;
         }
 
-        public void setNestId(UUID nestId) {
-                this.nestId = nestId;
+        public void setNest(Nest nest) {
+                this.nest = nest;
         }
 
         public int getSpeciesId() {

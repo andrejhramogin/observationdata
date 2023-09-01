@@ -20,7 +20,7 @@ public class DtoNestRsp {
     private Timestamp createdAt;
     private Timestamp modifiedAt;
 
-    public DtoNestRsp(){}
+//    public DtoNestRsp(){}
 
     public UUID getId() {
         return id;

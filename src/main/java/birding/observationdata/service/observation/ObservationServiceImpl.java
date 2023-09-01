@@ -42,7 +42,6 @@ public class ObservationServiceImpl implements ObservationService {
             Observation updatedObs = obsJpaRepository.getReferenceById(id);
             newObs.setId(updatedObs.getId());
             newObs.setCreatedAt(updatedObs.getCreatedAt());
-            newObs.setModifiedAt(new Timestamp(System.currentTimeMillis()));
             obsJpaRepository.save(newObs);
             return findObservationById(updatedObs.getId());
         }

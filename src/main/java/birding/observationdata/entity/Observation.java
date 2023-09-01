@@ -3,6 +3,7 @@ package birding.observationdata.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -65,13 +66,13 @@ public class Observation {
     private int placeId;
 
     @CreationTimestamp
-    @Column(name = "created_at", insertable = false)
+    @Column(name = "created_at", updatable  = false)
     //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
     example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
 
-    @CreationTimestamp
+    @UpdateTimestamp
     @Column(name = "modified_at", insertable = false)
     @Schema(description = "Date and time of the record was modified",
             example = "2022-10-03 10:20:11.114")

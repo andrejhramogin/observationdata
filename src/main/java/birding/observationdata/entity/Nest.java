@@ -18,7 +18,7 @@ public class Nest {
             example = "fce26092-6759-47b8-b0fd-c6796d6705fb")
     private UUID id;
 
-    @Column(name="eggs_quantity")
+    @Column(name = "eggs_quantity")
     @Schema(name = "eggs_quantity", example = "4")
     private int eggsQuantity;
 
@@ -37,17 +37,17 @@ public class Nest {
     private Biotope biotope;
 
     @OneToOne(optional = false)
-    @JoinColumn(name = "location_id")
+    @JoinColumn(name = "location_id", referencedColumnName = "id")
     @Schema(description = "ID of the table 'location'", example = "6a61b1f4-7dcd-4b79-a344-5f246fabe024")
     private Location location;
 
     @OneToOne(optional = false)
-    @JoinColumn(name = "nest_type_id")
+    @JoinColumn(name = "nest_type_id", referencedColumnName = "id")
     @Schema(description = "ID of the table 'nest_type'", example = "fce26092-6759-47b8-b0fd-c6796d6705fb")
     private NestType nestType;
 
     @OneToOne(optional = false)
-    @JoinColumn(name = "nest_dimension_id")
+    @JoinColumn(name = "nest_dimension_id", referencedColumnName = "id")
     @Schema(description = "ID of the table 'nest_dimension'")
     private NestDimension nestDimension;
 
@@ -102,7 +102,6 @@ public class Nest {
     public void setBiotope(Biotope biotope) {
         this.biotope = biotope;
     }
-
 
     public Location getLocation() {
         return location;

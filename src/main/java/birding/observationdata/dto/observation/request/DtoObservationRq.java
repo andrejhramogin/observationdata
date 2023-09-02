@@ -9,7 +9,6 @@ import jakarta.validation.constraints.Positive;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.util.UUID;
 
 public class DtoObservationRq {
         @NotNull(message = "Date can`t be null")

@@ -18,8 +18,6 @@ public class NestType {
     @Schema(description = "description of the nest type", example = "cup - shaped")
     private String type;
 
-    public NestType(){}
-
     public UUID getId() {
         return id;
     }

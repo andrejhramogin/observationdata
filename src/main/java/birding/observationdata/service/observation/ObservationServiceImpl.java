@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +28,7 @@ public class ObservationServiceImpl implements ObservationService {
         return findObservationById(observation.getId());
 //        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
+
     @Override
     public void deleteObservationById(UUID id) {
         obsJpaRepository.deleteById(id);
@@ -36,8 +38,9 @@ public class ObservationServiceImpl implements ObservationService {
     public DtoObservationRsp findObservationById(UUID id) {
         return mapper.entityToDto(obsJpaRepository.findById(id)
                 .orElseThrow(
-                        ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
+                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
+
     @Override
     public DtoObservationRsp updateObservation(DtoObservationRq obs, UUID id) {
         if (obsJpaRepository.existsById(id)) {
@@ -48,10 +51,16 @@ public class ObservationServiceImpl implements ObservationService {
             return findObservationById(updatedObs.getId());
         }
         return mapper.entityToDto(obsJpaRepository.findById(id).orElseThrow(
-                ()-> new ResourceNotFoundException("Observation with id " + id + " not found")));
+                () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
+
     @Override
     public List<DtoObservationRsp> getAllObservation() {
+        //не корректно работает: в observation вместо nest выводит null
         return mapper.listEntityToDto(obsJpaRepository.findAll());
+
+//        return obsJpaRepository.findAll().stream()
+//                .map(mapper::entityToDto)
+//                .toList();
     }
 }

@@ -36,7 +36,7 @@ public class Observation {
     private String description;
 
     @OneToOne(optional = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "nest_id")
+    @JoinColumn(name = "nest_id", referencedColumnName = "id")
     @Schema(description = "ID of table 'nest'", example = "1")
     private Nest nest;
 
@@ -46,29 +46,27 @@ public class Observation {
 
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "species_id", nullable = false)
-    @Column(name="species_id", nullable = false)
+    @Column(name = "species_id", nullable = false)
     @Schema(description = "ID of table 'species'", example = "2")
     private int speciesId;
 
-
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "user_id", nullable = false)
-    @Column(name="user_id", nullable = false)
+    @Column(name = "user_id", nullable = false)
     @Schema(description = "ID of table 'user'", example = "2")
     private int userId;
 
-
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "place_id", nullable = false)
-    @Column(name="place_id", nullable = false)
+    @Column(name = "place_id", nullable = false)
     @Schema(description = "ID of table 'place'", example = "3")
     private int placeId;
 
     @CreationTimestamp
-    @Column(name = "created_at", updatable  = false)
+    @Column(name = "created_at", updatable = false)
     //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Date and time of the record was created",
-    example = "2022-10-03 10:20:11.114")
+            example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
 
     @UpdateTimestamp

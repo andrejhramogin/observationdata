@@ -36,7 +36,7 @@ public class NestServiceImpl implements NestService {
 //        return nestRsp;
     }
 
-    public DtoNestRsp findNestById(UUID id) {
+    public DtoNestRsp findNestById(UUID id){
         return mapper.entityToDto(nestJpaRepository.findById(id)
                 .orElseThrow(
                         () -> new ResourceNotFoundException("Observation with id " + id + " not found")));

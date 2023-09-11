@@ -3,11 +3,14 @@ package birding.observationdata.controller;
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 import birding.observationdata.service.observation.ObservationService;
+import birding.observationdata.service.placemanager.PlaceService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,10 +18,12 @@ import java.util.UUID;
 
 @RestController
 @Tag(name = "Observation API")
-public class ObservationController {
+public class  ObservationController {
 
     @Autowired
     private ObservationService observationService;
+    @Autowired
+    PlaceService placeService;
 
     @PostMapping("/observation")
     @Operation(summary = "Create a new observation in DB", description = "Creates a new observation in DB and returns it")
@@ -47,6 +52,22 @@ public class ObservationController {
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public List<DtoObservationRsp> getAllObservation(){
         return observationService.getAllObservation();
+    }
+
+    @GetMapping("/countries")
+    public ResponseEntity<List<Object>> getCountries(){
+        return new ResponseEntity<>(placeService.getAllCountries(), HttpStatus.OK);
+    }
+
+    //не находит path "/countries"
+    @GetMapping("/countries/{id}")
+    public ResponseEntity<Object> getCountryById(@PathVariable UUID id){
+        return new ResponseEntity<>(placeService.getCountryById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/places/{id}")
+    public ResponseEntity<Object> getPlaceById(@PathVariable UUID id) {
+        return new ResponseEntity<>(placeService.getPlaceById(id), HttpStatus.OK);
     }
 
     @PutMapping("/observation/{id}")

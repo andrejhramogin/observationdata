@@ -9,6 +9,7 @@ import jakarta.validation.constraints.Positive;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class DtoObservationRq {
         @NotNull(message = "Date can`t be null")
@@ -34,7 +35,7 @@ public class DtoObservationRq {
         private int userId;
         @NotNull(message = "Place can`t be null")
         @Schema(description = "ID of table 'place'", example = "e17002a5-63aa-4ab9-8ed0-bd379a1c7255")
-        private int placeId;
+        private UUID placeId;
         @Schema(description = "Date and time of the record was created",
                 example = "2022-10-03 10:20:11.114")
         private Timestamp createdAt;
@@ -90,11 +91,11 @@ public class DtoObservationRq {
                 this.userId = userId;
         }
 
-        public int getPlaceId() {
+        public UUID getPlaceId() {
                 return placeId;
         }
 
-        public void setPlaceId(int placeId) {
+        public void setPlaceId(UUID placeId) {
                 this.placeId = placeId;
         }
 

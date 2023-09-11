@@ -48,7 +48,7 @@ databaseChangeLog:
               #                    references: user(id)
               - column:
                   name: place_id
-                  type: INT
+                  type: UUID
                   constraints:
                     nullable: false
               #                    foreignKeyName: place_id

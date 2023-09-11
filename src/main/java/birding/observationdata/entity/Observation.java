@@ -59,8 +59,8 @@ public class Observation {
     //    @OneToOne(optional = false)
 //    @JoinColumn(name = "place_id", nullable = false)
     @Column(name = "place_id", nullable = false)
-    @Schema(description = "ID of table 'place'", example = "3")
-    private int placeId;
+    @Schema(description = "ID of table 'place'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
+    private UUID placeId;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -131,11 +131,11 @@ public class Observation {
         this.userId = userId;
     }
 
-    public int getPlaceId() {
+    public UUID getPlaceId() {
         return placeId;
     }
 
-    public void setPlaceId(int placeId) {
+    public void setPlaceId(UUID placeId) {
         this.placeId = placeId;
     }
 

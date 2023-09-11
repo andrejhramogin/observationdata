@@ -16,7 +16,7 @@ public class DtoObservationRsp {
 //    private UUID nestId;
     private int speciesId;
     private int userId;
-    private int placeId;
+    private UUID placeId;
     private Timestamp createdAt;
     private Timestamp modifiedAt;
 
@@ -76,11 +76,11 @@ public class DtoObservationRsp {
         this.userId = userId;
     }
 
-    public int getPlaceId() {
+    public UUID getPlaceId() {
         return placeId;
     }
 
-    public void setPlaceId(int placeId) {
+    public void setPlaceId(UUID placeId) {
         this.placeId = placeId;
     }
 

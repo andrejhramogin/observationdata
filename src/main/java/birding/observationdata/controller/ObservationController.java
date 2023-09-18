@@ -9,8 +9,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,7 +39,7 @@ public class  ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public DtoObservationRsp getObsById(@PathVariable UUID id){
+    public DtoObservationRsp getObservationById(@PathVariable UUID id){
         return observationService.findObservationById(id);
     }
 
@@ -54,21 +52,6 @@ public class  ObservationController {
         return observationService.getAllObservation();
     }
 
-    @GetMapping("/countries")
-    public ResponseEntity<List<Object>> getCountries(){
-        return new ResponseEntity<>(placeService.getAllCountries(), HttpStatus.OK);
-    }
-
-    //не находит path "/countries"
-    @GetMapping("/countries/{id}")
-    public ResponseEntity<Object> getCountryById(@PathVariable UUID id){
-        return new ResponseEntity<>(placeService.getCountryById(id), HttpStatus.OK);
-    }
-
-    @GetMapping("/places/{id}")
-    public ResponseEntity<Object> getPlaceById(@PathVariable UUID id) {
-        return new ResponseEntity<>(placeService.getPlaceById(id), HttpStatus.OK);
-    }
 
     @PutMapping("/observation/{id}")
     @Operation(summary = "Update observation", description = "Updates the observation with the id number and returns it from the DB")
@@ -85,7 +68,7 @@ public class  ObservationController {
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
 
-    public void deleteObsById(@PathVariable UUID id){
+    public void deleteObservationById(@PathVariable UUID id){
         observationService.deleteObservationById(id);
     }
 }

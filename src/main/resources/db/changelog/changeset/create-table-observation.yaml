@@ -34,14 +34,14 @@ databaseChangeLog:
                     references: nest(id)
               - column:
                   name: species_id
-                  type: INT
+                  type: UUID
                   constraints:
                     nullable: false
               #                    foreignKeyName: species_id
               #                    references: species(id)
               - column:
                   name: user_id
-                  type: INT
+                  type: UUID
                   constraints:
                     nullable: false
               #                    foreignKeyName: user_id

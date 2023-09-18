@@ -14,7 +14,7 @@ import java.util.UUID;
 public class DtoObservationRq {
         @NotNull(message = "Date can`t be null")
         @PastOrPresent(message = "Date or time must be in the past or in the present")
-        @Schema(description = "date of observation", example = "2023-08-14")
+        @Schema(name= "date", description = "date of observation", example = "2023-08-14")
         private LocalDate date;
         @NotNull(message = "Quantity can`t be null")
         @Positive(message = "Quantity must be a positive number")
@@ -23,17 +23,15 @@ public class DtoObservationRq {
         @NotBlank(message = "Description name must not be blank")
         @Schema(description = "description of the observation", example = "A couple on the nest site")
         private String description;
-
         @Schema(description = "Id of table 'nest'", example = "253a3bde-b477-4731-a592-34e5a0482918")
         private Nest nest;
-//        private UUID nestId;
         @NotNull(message = "Species id can`t be null")
         @Schema(description = "ID of table 'species'", example = "58e6ccb8-102a-4ecd-b43e-e981968cc833")
-        private int speciesId;
+        private UUID speciesId;
         @NotNull(message = "User can`t be null")
         @Schema(description = "ID of table 'user'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
-        private int userId;
-        @NotNull(message = "Place can`t be null")
+        private UUID userId;
+        @NotNull(message = "Place id can`t be null")
         @Schema(description = "ID of table 'place'", example = "e17002a5-63aa-4ab9-8ed0-bd379a1c7255")
         private UUID placeId;
         @Schema(description = "Date and time of the record was created",
@@ -75,19 +73,19 @@ public class DtoObservationRq {
                 this.nest = nest;
         }
 
-        public int getSpeciesId() {
+        public UUID getSpeciesId() {
                 return speciesId;
         }
 
-        public void setSpeciesId(int speciesId) {
+        public void setSpeciesId(UUID speciesId) {
                 this.speciesId = speciesId;
         }
 
-        public int getUserId() {
+        public UUID getUserId() {
                 return userId;
         }
 
-        public void setUserId(int userId) {
+        public void setUserId(UUID userId) {
                 this.userId = userId;
         }
 

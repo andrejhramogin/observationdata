@@ -1,12 +1,25 @@
 package birding.observationdata.service.placemanager;
 
+import birding.observationdata.dto.country.Country;
+import birding.observationdata.dto.place.request.DtoPlaceRq;
+import birding.observationdata.dto.place.response.DtoPlaceRsp;
+
 import java.util.List;
 import java.util.UUID;
 
 public interface PlaceService {
-    List<Object>getAllCountries();
 
-    Object getCountryById(UUID id);
+    DtoPlaceRsp createPlace(DtoPlaceRq dtoPlaceRq);
 
-    Object getPlaceById(UUID id);
+    List<DtoPlaceRsp> getPlaces();
+
+    DtoPlaceRsp getPlaceById(UUID id);
+
+    DtoPlaceRsp updatePlace(DtoPlaceRq dtoPlaceRq, UUID id);
+
+    void deleteObservationById(UUID id);
+
+    List<Country> getAllCountries();
+
+    Country getCountryById(UUID id);
 }

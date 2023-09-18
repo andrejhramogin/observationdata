@@ -1,11 +1,13 @@
 package birding.observationdata.service.observation;
 
+import birding.observationdata.dto.place.request.DtoPlaceRq;
 import birding.observationdata.mapper.ObservationMapper;
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
+import birding.observationdata.service.placemanager.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,11 +22,12 @@ public class ObservationServiceImpl implements ObservationService {
     private ObservationMapper mapper;
 
     @Override
-    public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
-        Observation observation = mapper.dtoToEntity(dto);
-        obsJpaRepository.save(observation);
-        return findObservationById(observation.getId());
-//        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
+//ошибка: при возврате созданного Observation nestType, location = null
+        public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
+//            Observation observation = mapper.dtoToEntity(dto);
+//            UUID id = obsJpaRepository.save(observation).getId();
+//            return findObservationById(id);
+        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
 
     @Override
@@ -54,7 +57,7 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public List<DtoObservationRsp> getAllObservation() {
-        //не корректно работает: в observation вместо nest выводит null
+        //ошибка: в observation вместо nest выводит null
         return mapper.listEntityToDto(obsJpaRepository.findAll());
 
 //        return obsJpaRepository.findAll().stream()

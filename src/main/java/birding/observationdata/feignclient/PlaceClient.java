@@ -1,7 +1,10 @@
 package birding.observationdata.feignclient;
 
+import birding.observationdata.dto.country.Country;
+import birding.observationdata.dto.place.request.DtoPlaceRq;
+import birding.observationdata.dto.place.response.DtoPlaceRsp;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -11,15 +14,25 @@ import java.util.UUID;
         url = "http://localhost:8081"
 )
 public interface PlaceClient {
-    @GetMapping("/countries")
-    List<Object>getCountries();
 
-    @GetMapping("/countries/{id}")
-    Object getCountryById(UUID id);
+    @PostMapping("/places")
+    DtoPlaceRsp createPlace(DtoPlaceRq dtoPlaceRq);
+
+    @GetMapping("/places")
+    List<DtoPlaceRsp> getPlaces();
 
     @GetMapping("/places/{id}")
-    Object getPlaceById(UUID id);
+    DtoPlaceRsp getPlaceById(@PathVariable(value = "id") UUID id);
 
-//    @PostMapping("/places")
+    @PutMapping("/places/{id}")
+    DtoPlaceRsp updatePlace(DtoPlaceRq dtoPlaceRq, @PathVariable(value = "id") UUID id);
 
+    @DeleteMapping("/places/{id}")
+    void deletePlaceById(@PathVariable(value = "id") UUID id);
+
+    @GetMapping("/countries")
+    List<Country> getCountries();
+
+    @GetMapping("/countries/{id}")
+    Country getCountryById(@PathVariable(value = "id") UUID id);
 }

@@ -1,13 +1,11 @@
 package birding.observationdata.service.observation;
 
-import birding.observationdata.dto.place.request.DtoPlaceRq;
 import birding.observationdata.mapper.ObservationMapper;
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
-import birding.observationdata.service.placemanager.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,24 +20,27 @@ public class ObservationServiceImpl implements ObservationService {
     private ObservationMapper mapper;
 
     @Override
-//ошибка: при возврате созданного Observation nestType, location = null
-        public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
-//            Observation observation = mapper.dtoToEntity(dto);
-//            UUID id = obsJpaRepository.save(observation).getId();
-//            return findObservationById(id);
+    public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
         return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
 
     @Override
     public void deleteObservationById(UUID id) {
-        obsJpaRepository.deleteById(id);
+        if (obsJpaRepository.existsById(id)) {
+            obsJpaRepository.deleteById(id);
+        }
+        throw new ResourceNotFoundException("Observation with id " + id + " not found");
     }
 
     @Override
     public DtoObservationRsp findObservationById(UUID id) {
-        return mapper.entityToDto(obsJpaRepository.findById(id)
-                .orElseThrow(
-                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
+        if (obsJpaRepository.existsById(id))
+            return mapper.entityToDto(obsJpaRepository.getReferenceById(id));
+        throw new ResourceNotFoundException("Observation with id " + id + " not found");
+
+//        return mapper.entityToDto(obsJpaRepository.findById(id)
+//                .orElseThrow(
+//                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
 
     @Override

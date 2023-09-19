@@ -21,22 +21,26 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
-        Observation observation = mapper.dtoToEntity(dto);
-        obsJpaRepository.save(observation);
-        return findObservationById(observation.getId());
-//        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
+        return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
 
     @Override
     public void deleteObservationById(UUID id) {
-        obsJpaRepository.deleteById(id);
+        if (obsJpaRepository.existsById(id)) {
+            obsJpaRepository.deleteById(id);
+        }
+        throw new ResourceNotFoundException("Observation with id " + id + " not found");
     }
 
     @Override
     public DtoObservationRsp findObservationById(UUID id) {
-        return mapper.entityToDto(obsJpaRepository.findById(id)
-                .orElseThrow(
-                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
+        if (obsJpaRepository.existsById(id))
+            return mapper.entityToDto(obsJpaRepository.getReferenceById(id));
+        throw new ResourceNotFoundException("Observation with id " + id + " not found");
+
+//        return mapper.entityToDto(obsJpaRepository.findById(id)
+//                .orElseThrow(
+//                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
 
     @Override
@@ -54,7 +58,7 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public List<DtoObservationRsp> getAllObservation() {
-        //не корректно работает: в observation вместо nest выводит null
+        //ошибка: в observation вместо nest выводит null
         return mapper.listEntityToDto(obsJpaRepository.findAll());
 
 //        return obsJpaRepository.findAll().stream()

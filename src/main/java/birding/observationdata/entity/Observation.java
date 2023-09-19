@@ -40,27 +40,17 @@ public class Observation {
     @Schema(description = "ID of table 'nest'", example = "1")
     private Nest nest;
 
-//    @Column(name="nest_id")
-//    @Schema(description = "ID of table 'nest'", example = "2")
-//    private UUID nestId;
-
-    //    @OneToOne(optional = false)
-//    @JoinColumn(name = "species_id", nullable = false)
     @Column(name = "species_id", nullable = false)
-    @Schema(description = "ID of table 'species'", example = "2")
-    private int speciesId;
+    @Schema(description = "ID of table 'species'", example = "ecc06efd-1495-424f-a666-7624e8e7415f")
+    private UUID speciesId;
 
-    //    @OneToOne(optional = false)
-//    @JoinColumn(name = "user_id", nullable = false)
     @Column(name = "user_id", nullable = false)
-    @Schema(description = "ID of table 'user'", example = "2")
-    private int userId;
+    @Schema(description = "ID of table 'user'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
+    private UUID userId;
 
-    //    @OneToOne(optional = false)
-//    @JoinColumn(name = "place_id", nullable = false)
     @Column(name = "place_id", nullable = false)
-    @Schema(description = "ID of table 'place'", example = "3")
-    private int placeId;
+    @Schema(description = "ID of table 'place'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
+    private UUID placeId;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -115,27 +105,27 @@ public class Observation {
         this.nest = nest;
     }
 
-    public int getSpeciesId() {
+    public UUID getSpeciesId() {
         return speciesId;
     }
 
-    public void setSpeciesId(int speciesId) {
+    public void setSpeciesId(UUID speciesId) {
         this.speciesId = speciesId;
     }
 
-    public int getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
-    public int getPlaceId() {
+    public UUID getPlaceId() {
         return placeId;
     }
 
-    public void setPlaceId(int placeId) {
+    public void setPlaceId(UUID placeId) {
         this.placeId = placeId;
     }
 

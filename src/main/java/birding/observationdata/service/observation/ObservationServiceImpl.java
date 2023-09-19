@@ -28,8 +28,9 @@ public class ObservationServiceImpl implements ObservationService {
     public void deleteObservationById(UUID id) {
         if (obsJpaRepository.existsById(id)) {
             obsJpaRepository.deleteById(id);
+        }else {
+            throw new ResourceNotFoundException("Observation with id " + id + " not found");
         }
-        throw new ResourceNotFoundException("Observation with id " + id + " not found");
     }
 
     @Override
@@ -37,10 +38,6 @@ public class ObservationServiceImpl implements ObservationService {
         if (obsJpaRepository.existsById(id))
             return mapper.entityToDto(obsJpaRepository.getReferenceById(id));
         throw new ResourceNotFoundException("Observation with id " + id + " not found");
-
-//        return mapper.entityToDto(obsJpaRepository.findById(id)
-//                .orElseThrow(
-//                        () -> new ResourceNotFoundException("Observation with id " + id + " not found")));
     }
 
     @Override
@@ -60,9 +57,5 @@ public class ObservationServiceImpl implements ObservationService {
     public List<DtoObservationRsp> getAllObservation() {
         //ошибка: в observation вместо nest выводит null
         return mapper.listEntityToDto(obsJpaRepository.findAll());
-
-//        return obsJpaRepository.findAll().stream()
-//                .map(mapper::entityToDto)
-//                .toList();
     }
 }

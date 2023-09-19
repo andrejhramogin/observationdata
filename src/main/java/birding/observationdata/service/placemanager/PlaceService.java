@@ -16,10 +16,4 @@ public interface PlaceService {
     DtoPlaceRsp getPlaceById(UUID id);
 
     DtoPlaceRsp updatePlace(DtoPlaceRq dtoPlaceRq, UUID id);
-
-    void deleteObservationById(UUID id);
-
-    List<Country> getAllCountries();
-
-    Country getCountryById(UUID id);
 }

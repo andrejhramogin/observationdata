@@ -34,19 +34,4 @@ public class PlaceServiceImpl implements PlaceService {
     public DtoPlaceRsp updatePlace(DtoPlaceRq dtoPlaceRq, UUID id) {
         return placeClient.updatePlace(dtoPlaceRq, id);
     }
-
-    @Override
-    public void deleteObservationById(UUID id) {
-        placeClient.deletePlaceById(id);
-    }
-
-    @Override
-    public List<Country> getAllCountries() {
-        return placeClient.getCountries();
-    }
-
-    @Override
-    public Country getCountryById(UUID id) {
-        return placeClient.getCountryById(id);
-    }
 }

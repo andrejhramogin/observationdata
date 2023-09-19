@@ -1,4 +1,4 @@
-package birding.observationdata.dto.place.response;
+package birding.observationdata.integration.place.dto.response;
 
 import birding.observationdata.dto.country.Country;
 import io.swagger.v3.oas.annotations.media.Schema;

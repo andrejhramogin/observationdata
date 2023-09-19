@@ -33,7 +33,6 @@ public class  ObservationController {
     @ApiResponse(responseCode = "200", description = "A observation was created successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-
     public DtoObservationRsp createObservation (@Valid @RequestBody DtoObservationRq observation){
         return observationService.createNewObservation(observation);
     }
@@ -43,16 +42,11 @@ public class  ObservationController {
     @ApiResponse(responseCode = "200", description = "observation from the table 'observations' were received successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-
-    public ResponseEntity<DtoObservationRsp> getLevelById (
-            @PathVariable("id") @NotNull UUID id)
-            throws Exception {
-//        log.info("Gets level with id {}", id);
+    public ResponseEntity<DtoObservationRsp> getObservationById (
+            @PathVariable("id") @NotNull UUID id) {
+//        log.info("Gets observation with id {}", id);
         return new ResponseEntity<>(observationService.findObservationById(id), HttpStatus.OK);
     }
-//    public DtoObservationRsp getObservationById(@PathVariable UUID id){
-//        return observationService.findObservationById(id);
-//    }
 
     @GetMapping("/observation")
     @Operation(summary = "Get observation", description = "Get all observation from table 'observation'")
@@ -62,7 +56,6 @@ public class  ObservationController {
     public List<DtoObservationRsp> getAllObservation(){
         return observationService.getAllObservation();
     }
-
 
     @PutMapping("/observation/{id}")
     @Operation(summary = "Update observation", description = "Updates the observation with the id number and returns it from the DB")
@@ -78,7 +71,6 @@ public class  ObservationController {
     @ApiResponse(responseCode = "200", description = "observation from the table 'observations' were deleted successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-
     public void deleteObservationById(@PathVariable UUID id){
         observationService.deleteObservationById(id);
     }

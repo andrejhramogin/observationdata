@@ -1,11 +1,8 @@
 package birding.observationdata.service.placemanager;
 
-import birding.observationdata.dto.country.Country;
-import birding.observationdata.dto.place.request.DtoPlaceRq;
-import birding.observationdata.dto.place.response.DtoPlaceRsp;
-import birding.observationdata.feignclient.PlaceClient;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import birding.observationdata.integration.place.dto.request.DtoPlaceRq;
+import birding.observationdata.integration.place.dto.response.DtoPlaceRsp;
+import birding.observationdata.integration.place.PlaceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +11,6 @@ import java.util.UUID;
 
 @Service
 public class PlaceServiceImpl implements PlaceService {
-    private static final Logger logger = LoggerFactory.getLogger(PlaceServiceImpl.class);
     @Autowired
     PlaceClient placeClient;
     @Override
@@ -29,7 +25,6 @@ public class PlaceServiceImpl implements PlaceService {
     public DtoPlaceRsp getPlaceById(UUID id) {
         return placeClient.getPlaceById(id);
     }
-
     @Override
     public DtoPlaceRsp updatePlace(DtoPlaceRq dtoPlaceRq, UUID id) {
         return placeClient.updatePlace(dtoPlaceRq, id);

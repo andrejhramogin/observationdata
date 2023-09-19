@@ -1,6 +1,5 @@
 package birding.observationdata.entity;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -14,53 +13,39 @@ public class Nest {
     @Id
     @Column(name = "id", insertable = false)
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Schema(description = "id number in 'observation' nest",
-            example = "fce26092-6759-47b8-b0fd-c6796d6705fb")
     private UUID id;
 
     @Column(name = "eggs_quantity")
-    @Schema(name = "eggs_quantity", example = "4")
     private int eggsQuantity;
 
     @Column
-    @Schema(name = "chicks_quantity", example = "4")
     private int chicksQuantity;
 
     @Column(name = "description")
-    @Schema(description = "description of the nest",
-            example = "A nest on the ground near tree")
     private String description;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "biotope_id", referencedColumnName = "id")
-    @Schema(description = "ID of table 'biotope'", example = "6a61b1f4-7dcd-4b79-a344-5f246fabe024")
     private Biotope biotope;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "location_id", referencedColumnName = "id")
-    @Schema(description = "ID of the table 'location'", example = "6a61b1f4-7dcd-4b79-a344-5f246fabe024")
     private Location location;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "nest_type_id", referencedColumnName = "id")
-    @Schema(description = "ID of the table 'nest_type'", example = "fce26092-6759-47b8-b0fd-c6796d6705fb")
     private NestType nestType;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "nest_dimension_id", referencedColumnName = "id")
-    @Schema(description = "ID of the table 'nest_dimension'")
     private NestDimension nestDimension;
 
     @CreationTimestamp
     @Column(name = "created_at", insertable = false, updatable = false)
-    @Schema(description = "Date and time of the record was created",
-            example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
 
     @UpdateTimestamp
     @Column(name = "modified_at", insertable = false)
-    @Schema(description = "Date and time of the record was created",
-            example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
 
     public UUID getId() {

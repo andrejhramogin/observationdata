@@ -1,8 +1,8 @@
-package birding.observationdata.feignclient;
+package birding.observationdata.integration.place;
 
 import birding.observationdata.dto.country.Country;
-import birding.observationdata.dto.place.request.DtoPlaceRq;
-import birding.observationdata.dto.place.response.DtoPlaceRsp;
+import birding.observationdata.integration.place.dto.request.DtoPlaceRq;
+import birding.observationdata.integration.place.dto.response.DtoPlaceRsp;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

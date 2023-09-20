@@ -25,8 +25,8 @@ public class  ObservationController {
 
     @Autowired
     private ObservationService observationService;
-    @Autowired
-    PlaceService placeService;
+//    @Autowired
+//    PlaceService placeService;
 
     @PostMapping("/observation")
     @Operation(summary = "Create a new observation in DB", description = "Creates a new observation in DB and returns it")

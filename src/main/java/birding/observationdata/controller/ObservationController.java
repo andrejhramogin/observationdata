@@ -3,7 +3,6 @@ package birding.observationdata.controller;
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 import birding.observationdata.service.observation.ObservationService;
-import birding.observationdata.service.placemanager.PlaceService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;

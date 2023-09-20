@@ -4,7 +4,7 @@
 17.09.2023 10:26:29.239 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:26:29.335 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:26:29.591 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:26:29.681 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:26:29.681 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:26:30.034 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:26:30.042 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:26:30.043 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -86,7 +86,7 @@
 17.09.2023 10:38:10.462 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:38:10.533 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:38:10.762 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:38:10.835 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:38:10.835 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:38:11.186 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:38:11.197 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:38:11.198 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -139,7 +139,7 @@
 17.09.2023 10:39:25.862 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:39:25.932 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:39:26.172 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:39:26.264 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:39:26.264 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:39:26.585 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:39:26.594 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:39:26.595 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -192,7 +192,7 @@
 17.09.2023 10:42:48.455 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:42:48.543 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:42:48.744 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:42:48.809 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:42:48.809 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:42:49.192 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:42:49.204 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:42:49.205 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -245,7 +245,7 @@
 17.09.2023 10:44:55.448 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:44:55.517 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:44:55.779 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:44:55.845 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:44:55.845 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:44:56.141 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:44:56.150 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:44:56.151 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -361,7 +361,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 10:49:36.716 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:49:36.783 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:49:36.994 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:49:37.067 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:49:37.067 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:49:37.365 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:49:37.373 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:49:37.374 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -477,7 +477,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 10:50:45.683 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:50:45.771 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:50:46.036 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:50:46.103 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:50:46.103 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:50:46.406 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:50:46.414 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:50:46.415 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -531,7 +531,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 10:53:38.766 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:53:38.856 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:53:39.092 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:53:39.175 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:53:39.175 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:53:39.483 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:53:39.491 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:53:39.492 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -584,7 +584,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 10:57:09.291 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:57:09.365 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:57:09.594 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:57:09.659 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:57:09.659 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:57:09.960 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:57:09.969 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:57:09.970 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -637,7 +637,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 10:59:44.053 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 10:59:44.128 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 10:59:44.328 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 10:59:44.398 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 10:59:44.398 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 10:59:44.707 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 10:59:44.716 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 10:59:44.717 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -690,7 +690,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 11:00:52.354 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 11:00:52.428 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 11:00:52.644 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 11:00:52.707 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 11:00:52.707 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 11:00:52.984 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 11:00:52.993 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 11:00:52.994 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -743,7 +743,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 11:08:39.469 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 11:08:39.555 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
 17.09.2023 11:08:39.719 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 11:08:39.791 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 11:08:39.791 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 11:08:40.107 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 11:08:40.116 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 11:08:40.117 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -859,7 +859,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 11:21:27.021 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 11:21:27.095 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 11:21:27.310 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 11:21:27.405 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 11:21:27.405 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 11:21:27.719 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 11:21:27.728 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 11:21:27.729 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -975,7 +975,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 11:55:39.651 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 11:55:39.716 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
 17.09.2023 11:55:39.933 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 11:55:39.994 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 11:55:39.994 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 11:55:40.282 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 11:55:40.291 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 11:55:40.292 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1028,7 +1028,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 11:58:28.465 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 11:58:28.542 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
 17.09.2023 11:58:28.789 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 11:58:28.880 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 11:58:28.880 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 11:58:29.175 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 11:58:29.184 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 11:58:29.184 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1144,12 +1144,12 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 12:01:47.138 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 12:01:47.219 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
 17.09.2023 12:01:47.465 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 12:01:47.470 [main] WARN   o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'birding.observationdata.feignclient.PlaceClient' defined in null: Could not resolve placeholder 'client.post.baseUrl' in value "http://${client.post.baseUrl}"
+17.09.2023 12:01:47.470 [main] WARN   o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'birding.observationdata.integration.place.PlaceClient' defined in null: Could not resolve placeholder 'client.post.baseUrl' in value "http://${client.post.baseUrl}"
 17.09.2023 12:01:47.484 [main] INFO   o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 17.09.2023 12:01:47.498 [main] ERROR  o.s.b.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'birding.observationdata.feignclient.PlaceClient' defined in null: Could not resolve placeholder 'client.post.baseUrl' in value "http://${client.post.baseUrl}"
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'birding.observationdata.integration.place.PlaceClient' defined in null: Could not resolve placeholder 'client.post.baseUrl' in value "http://${client.post.baseUrl}"
 	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:230)
 	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.processProperties(PropertySourcesPlaceholderConfigurer.java:198)
 	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:173)
@@ -1182,7 +1182,7 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'cl
 17.09.2023 12:10:41.981 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 12:10:42.064 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
 17.09.2023 12:10:42.238 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 12:10:42.303 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 12:10:42.303 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 12:10:42.592 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 12:10:42.600 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 12:10:42.601 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1296,7 +1296,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 12:13:23.210 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 12:13:23.278 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 12:13:23.454 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 12:13:23.520 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 12:13:23.520 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 12:13:23.829 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 12:13:23.838 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 12:13:23.839 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1472,7 +1472,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:14:01.884 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:14:01.964 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:14:02.179 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:14:02.241 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:14:02.241 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:14:02.529 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:14:02.538 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:14:02.539 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1525,7 +1525,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:17:25.040 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:17:25.105 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:17:25.315 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:17:25.382 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:17:25.382 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:17:25.700 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:17:25.709 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:17:25.710 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1578,7 +1578,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:19:05.731 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:19:05.805 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:19:06.022 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:19:06.108 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:19:06.108 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:19:06.448 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:19:06.458 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:19:06.458 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1631,7 +1631,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:34:15.255 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:34:15.319 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:34:15.518 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:34:15.583 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:34:15.583 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:34:15.900 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:34:15.910 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:34:15.911 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1684,7 +1684,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:35:31.627 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:35:31.701 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:35:31.906 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:35:31.993 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:35:31.993 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:35:32.328 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:35:32.337 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:35:32.338 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1736,7 +1736,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:36:36.432 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:36:36.528 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:36:36.791 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:36:36.871 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:36:36.871 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:36:37.167 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:36:37.176 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:36:37.177 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1788,7 +1788,7 @@ feign.codec.EncodeException: Could not write request: no suitable HttpMessageCon
 17.09.2023 13:41:41.207 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:41:41.283 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:41:41.478 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:41:41.542 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:41:41.542 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:41:41.872 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:41:41.883 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:41:41.885 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1948,7 +1948,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 13:43:23.733 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:43:23.803 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:43:24.024 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:43:24.099 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:43:24.099 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:43:24.436 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:43:24.446 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:43:24.447 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -1997,7 +1997,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 13:45:35.284 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 13:45:35.367 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
 17.09.2023 13:45:35.563 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 13:45:35.628 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 13:45:35.628 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 13:45:35.929 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 13:45:35.937 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 13:45:35.938 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2178,7 +2178,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8081/plac
 17.09.2023 14:23:35.551 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 14:23:35.646 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
 17.09.2023 14:23:35.899 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 14:23:35.974 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 14:23:35.974 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 14:23:36.272 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 14:23:36.280 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 14:23:36.281 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2323,7 +2323,7 @@ feign.FeignException$NotFound: [404] during [POST] to [http://localhost:8081/pla
 17.09.2023 15:13:13.920 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 15:13:13.991 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 15:13:14.208 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 15:13:14.295 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 15:13:14.295 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 15:13:14.632 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 15:13:14.641 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 15:13:14.642 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2376,7 +2376,7 @@ feign.FeignException$NotFound: [404] during [POST] to [http://localhost:8081/pla
 17.09.2023 15:14:25.270 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 15:14:25.368 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
 17.09.2023 15:14:25.588 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 15:14:25.664 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 15:14:25.664 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 15:14:26.003 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 15:14:26.013 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 15:14:26.014 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2429,7 +2429,7 @@ feign.FeignException$NotFound: [404] during [POST] to [http://localhost:8081/pla
 17.09.2023 15:16:42.848 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 15:16:42.916 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 15:16:43.120 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 15:16:43.217 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 15:16:43.217 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 15:16:43.550 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 15:16:43.559 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 15:16:43.560 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2538,7 +2538,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 16:26:15.047 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:26:15.140 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:26:15.383 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:26:15.446 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:26:15.446 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:26:15.744 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:26:15.753 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:26:15.754 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2591,7 +2591,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 16:34:03.280 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:34:03.359 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:34:03.559 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:34:03.632 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:34:03.632 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:34:03.950 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:34:03.958 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:34:03.959 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2640,7 +2640,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 16:34:28.447 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:34:28.525 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:34:28.749 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:34:28.818 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:34:28.818 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:34:29.122 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:34:29.131 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:34:29.132 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2747,7 +2747,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 16:44:20.245 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:44:20.313 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:44:20.496 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:44:20.560 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:44:20.560 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:44:20.840 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:44:20.849 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:44:20.850 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2854,7 +2854,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 16:45:40.646 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:45:40.729 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:45:40.986 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:45:41.053 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:45:41.053 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:45:41.342 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:45:41.351 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:45:41.352 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2907,7 +2907,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 16:49:54.155 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:49:54.246 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:49:54.478 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:49:54.562 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:49:54.562 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:49:54.889 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:49:54.898 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:49:54.899 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -2960,7 +2960,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 16:57:04.699 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:57:04.767 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:57:04.971 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:57:05.056 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:57:05.056 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:57:05.383 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:57:05.392 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:57:05.393 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3013,7 +3013,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 16:59:23.895 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 16:59:23.965 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
 17.09.2023 16:59:24.151 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 16:59:24.237 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 16:59:24.237 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 16:59:24.553 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 16:59:24.562 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 16:59:24.563 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3176,7 +3176,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 17:03:55.789 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:03:55.872 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:03:56.127 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:03:56.189 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:03:56.189 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:03:56.498 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:03:56.507 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:03:56.508 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3566,7 +3566,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8081/coun
 17.09.2023 17:10:48.297 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:10:48.385 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:10:48.623 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:10:48.688 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:10:48.688 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:10:49.061 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:10:49.070 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:10:49.071 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3675,7 +3675,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 17:11:31.887 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:11:31.960 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:11:32.171 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:11:32.260 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:11:32.260 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:11:32.561 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:11:32.570 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:11:32.571 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3728,7 +3728,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 17:18:45.552 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:18:45.621 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:18:45.815 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:18:45.907 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:18:45.907 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:18:46.235 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:18:46.244 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:18:46.245 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -3924,7 +3924,7 @@ org.postgresql.util.PSQLException: ERROR: relation "nest" does not exist
 17.09.2023 17:24:01.813 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:24:01.886 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:24:02.113 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:24:02.188 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:24:02.188 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:24:02.468 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:24:02.477 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:24:02.479 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4336,7 +4336,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8081/plac
 17.09.2023 17:45:13.164 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 17:45:13.235 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
 17.09.2023 17:45:13.416 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 17:45:13.484 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 17:45:13.484 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 17:45:13.800 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 17:45:13.809 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 17:45:13.810 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4392,7 +4392,7 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8081/plac
 17.09.2023 18:42:52.487 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 18:42:52.584 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
 17.09.2023 18:42:52.788 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 18:42:52.851 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 18:42:52.851 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 18:42:53.211 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 18:42:53.220 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 18:42:53.222 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4686,7 +4686,7 @@ java.net.ConnectException: Connection refused
 17.09.2023 18:46:23.051 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 18:46:23.116 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
 17.09.2023 18:46:23.322 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 18:46:23.390 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 18:46:23.390 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 18:46:23.721 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 18:46:23.730 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 18:46:23.731 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4820,7 +4820,7 @@ java.net.ConnectException: Connection refused
 17.09.2023 18:56:05.811 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 18:56:05.886 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
 17.09.2023 18:56:06.091 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 18:56:06.159 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 18:56:06.159 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 18:56:06.463 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 18:56:06.471 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 18:56:06.472 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4902,7 +4902,7 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 17.09.2023 18:56:28.746 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 18:56:28.828 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
 17.09.2023 18:56:29.047 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 18:56:29.146 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 18:56:29.146 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 18:56:29.478 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 18:56:29.487 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 18:56:29.487 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -4983,7 +4983,7 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 17.09.2023 19:04:23.847 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:04:23.922 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:04:24.136 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:04:24.208 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:04:24.208 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:04:24.507 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:04:24.516 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:04:24.516 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5036,7 +5036,7 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 17.09.2023 19:08:45.325 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:08:45.407 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:08:45.618 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:08:45.690 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:08:45.690 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:08:46.001 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:08:46.008 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:08:46.009 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5089,7 +5089,7 @@ Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
 17.09.2023 19:17:12.635 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:17:12.699 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:17:12.915 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:17:13.010 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:17:13.010 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:17:13.417 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:17:13.430 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:17:13.431 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5254,7 +5254,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 19:23:36.180 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:23:36.258 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:23:36.483 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:23:36.564 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:23:36.564 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:23:36.858 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:23:36.867 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:23:36.868 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5307,7 +5307,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 19:25:52.565 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:25:52.649 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:25:52.843 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:25:52.911 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:25:52.911 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:25:53.232 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:25:53.242 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:25:53.243 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5359,7 +5359,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 19:27:20.407 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:27:20.484 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:27:20.663 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:27:20.731 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:27:20.731 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:27:21.032 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:27:21.040 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:27:21.041 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5412,7 +5412,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 19:49:45.168 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:49:45.240 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:49:45.457 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:49:45.520 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:49:45.520 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:49:45.853 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:49:45.864 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:49:45.865 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5575,7 +5575,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 19:55:46.830 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:55:46.897 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:55:47.118 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:55:47.202 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:55:47.202 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:55:47.487 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:55:47.505 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:55:47.506 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5629,7 +5629,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 19:58:38.616 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:58:38.692 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:58:38.922 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:58:39.016 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:58:39.016 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:58:39.367 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:58:39.379 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:58:39.380 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5684,7 +5684,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 19:59:58.786 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 19:59:58.854 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
 17.09.2023 19:59:59.043 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 19:59:59.126 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 19:59:59.126 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 19:59:59.430 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 19:59:59.439 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 19:59:59.440 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5740,7 +5740,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 20:06:19.957 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 20:06:20.018 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
 17.09.2023 20:06:20.262 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 20:06:20.350 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 20:06:20.350 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 20:06:20.648 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 20:06:20.657 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 20:06:20.658 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5849,7 +5849,7 @@ java.lang.NullPointerException: Cannot invoke "birding.observationdata.dto.count
 17.09.2023 20:08:58.853 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 20:08:58.920 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
 17.09.2023 20:08:59.116 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 20:08:59.180 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 20:08:59.180 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 20:08:59.458 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 20:08:59.467 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 20:08:59.468 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -5971,7 +5971,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 20:22:42.057 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 20:22:42.170 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 3 JPA repository interfaces.
 17.09.2023 20:22:42.404 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 20:22:42.484 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 20:22:42.484 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 20:22:42.781 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 20:22:42.789 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 20:22:42.790 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6027,7 +6027,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 20:26:05.579 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 20:26:05.650 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
 17.09.2023 20:26:05.848 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 20:26:05.935 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 20:26:05.935 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 20:26:06.237 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 20:26:06.245 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 20:26:06.246 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6082,7 +6082,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 20:29:51.557 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 20:29:51.633 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
 17.09.2023 20:29:51.848 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 20:29:51.915 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 20:29:51.915 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 20:29:52.250 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 20:29:52.262 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 20:29:52.263 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6165,7 +6165,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:13:27.959 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:13:28.055 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:13:28.260 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 21:13:28.323 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:13:28.323 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:13:28.640 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:13:28.649 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:13:28.650 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6224,7 +6224,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:20:44.309 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:20:44.381 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:20:44.632 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 21:20:44.721 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:20:44.721 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:20:45.076 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:20:45.085 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:20:45.085 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6313,7 +6313,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:24:05.999 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:24:06.070 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:24:06.274 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 21:24:06.339 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:24:06.339 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:24:06.632 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:24:06.641 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:24:06.642 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6366,7 +6366,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:25:41.527 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:25:41.601 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:25:41.859 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=5ff19a7e-8f94-375d-a45b-c70e0197510f
-17.09.2023 21:25:41.954 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:25:41.954 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:25:42.247 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:25:42.255 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:25:42.256 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6419,7 +6419,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:30:19.570 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:30:19.650 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:30:19.865 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 21:30:19.930 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:30:19.930 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:30:20.205 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:30:20.215 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:30:20.216 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6471,7 +6471,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:32:12.157 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:32:12.231 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:32:12.436 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 21:32:12.526 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:32:12.526 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:32:12.847 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:32:12.857 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:32:12.858 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6524,7 +6524,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:46:44.700 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:46:44.782 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:46:45.008 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 21:46:45.078 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:46:45.078 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:46:45.383 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:46:45.394 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:46:45.395 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6643,7 +6643,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:49:56.215 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:49:56.315 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:49:56.567 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 21:49:56.632 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:49:56.632 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:49:56.940 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:49:56.949 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:49:56.949 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6697,7 +6697,7 @@ feign.FeignException$BadRequest: [400] during [POST] to [http://localhost:8081/p
 17.09.2023 21:59:05.385 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 21:59:05.455 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
 17.09.2023 21:59:05.644 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 21:59:05.739 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 21:59:05.739 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 21:59:06.133 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 21:59:06.144 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 21:59:06.145 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]
@@ -6806,7 +6806,7 @@ birding.observationdata.exception.ResourceNotFoundException: Observation with id
 17.09.2023 22:12:32.688 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 17.09.2023 22:12:32.767 [main] INFO   o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 17.09.2023 22:12:33.027 [main] INFO   o.s.c.c.s.GenericScope - BeanFactory id=f5259cf6-8d0c-3258-b0f2-92cbd0542239
-17.09.2023 22:12:33.120 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.feignclient.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17.09.2023 22:12:33.120 [main] INFO   o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'birding.observationdata.integration.place.PlaceClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 17.09.2023 22:12:33.405 [main] INFO   o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
 17.09.2023 22:12:33.414 [main] INFO   o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
 17.09.2023 22:12:33.415 [main] INFO   o.a.c.c.StandardService - Starting service [Tomcat]

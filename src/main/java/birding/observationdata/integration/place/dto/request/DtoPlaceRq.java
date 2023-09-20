@@ -1,4 +1,4 @@
-package birding.observationdata.dto.place.request;
+package birding.observationdata.integration.place.dto.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;

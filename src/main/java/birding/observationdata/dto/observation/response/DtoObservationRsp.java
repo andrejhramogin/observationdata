@@ -1,6 +1,6 @@
 package birding.observationdata.dto.observation.response;
 
-import birding.observationdata.dto.place.response.DtoPlaceRsp;
+import birding.observationdata.integration.place.dto.response.DtoPlaceRsp;
 import birding.observationdata.entity.Nest;
 
 import java.sql.Timestamp;
@@ -16,8 +16,6 @@ public class DtoObservationRsp {
     private Nest nest;
     private UUID speciesId;
     private UUID userId;
-
-//    private UUID placeId;
     private DtoPlaceRsp dtoPlaceRsp;
     private Timestamp createdAt;
     private Timestamp modifiedAt;
@@ -77,15 +75,6 @@ public class DtoObservationRsp {
     public void setUserId(UUID userId) {
         this.userId = userId;
     }
-
-//    public UUID getPlaceId() {
-//        return placeId;
-//    }
-//
-//    public void setPlaceId(UUID placeId) {
-//        this.placeId = placeId;
-//    }
-
 
     public DtoPlaceRsp getDtoPlaceRsp() {
         return dtoPlaceRsp;

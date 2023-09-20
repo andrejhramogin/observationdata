@@ -1,5 +1,6 @@
 package birding.observationdata.service.observation;
 
+import birding.observationdata.integration.place.PlaceClient;
 import birding.observationdata.mapper.ObservationMapper;
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
@@ -9,8 +10,7 @@ import birding.observationdata.repository.ObservationJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class ObservationServiceImpl implements ObservationService {
@@ -18,9 +18,13 @@ public class ObservationServiceImpl implements ObservationService {
     private ObservationJpaRepository obsJpaRepository;
     @Autowired
     private ObservationMapper mapper;
+    @Autowired
+    private PlaceClient placeClient;
 
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dto) {
+        //ошибки при возврате save: dtoPlaceRsp = null, type: biotop, location, nestType = null
+        // (при вызове findObservationById - все ок)
         return mapper.entityToDto(obsJpaRepository.save(mapper.dtoToEntity(dto)));
     }
 
@@ -28,15 +32,19 @@ public class ObservationServiceImpl implements ObservationService {
     public void deleteObservationById(UUID id) {
         if (obsJpaRepository.existsById(id)) {
             obsJpaRepository.deleteById(id);
-        }else {
+        } else {
             throw new ResourceNotFoundException("Observation with id " + id + " not found");
         }
     }
 
     @Override
     public DtoObservationRsp findObservationById(UUID id) {
-        if (obsJpaRepository.existsById(id))
-            return mapper.entityToDto(obsJpaRepository.getReferenceById(id));
+        if (obsJpaRepository.existsById(id)) {
+            Observation obsReferencedById = obsJpaRepository.getReferenceById(id);
+            DtoObservationRsp dtoObservationRsp = mapper.entityToDto(obsReferencedById);
+            dtoObservationRsp.setDtoPlaceRsp(placeClient.getPlaceById(obsReferencedById.getPlaceId()));
+            return dtoObservationRsp;
+        }
         throw new ResourceNotFoundException("Observation with id " + id + " not found");
     }
 
@@ -55,7 +63,11 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public List<DtoObservationRsp> getAllObservation() {
-        //ошибка: в observation вместо nest выводит null
-        return mapper.listEntityToDto(obsJpaRepository.findAll());
+        List<Observation> listEntity = obsJpaRepository.findAll();
+        List<DtoObservationRsp> listDtoRsp = mapper.listEntityToDto(listEntity);
+        for (int i = 0; i < listEntity.size(); i++) {
+            listDtoRsp.get(i).setDtoPlaceRsp(placeClient.getPlaceById(listEntity.get(i).getPlaceId()));
+        }
+        return listDtoRsp;
     }
 }

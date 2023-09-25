@@ -6,7 +6,7 @@ import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class DtoPlaceRq {
+public class PlaceDtoReq {
     @Schema(name = "latitude", description = "Place latitude", example = "65.11589054716222")
     @NotNull(message = "latitude should not be empty")
     @DecimalMin(value = "-90.0", inclusive = true)
@@ -29,10 +29,9 @@ public class DtoPlaceRq {
     @Size(max = 1000, message = "1000 characters max")
     private String areaDescr;
 
-    @Schema(name = "countryId", description = "Country id", example = "086d792e-7974-4fe4-b2e0-2dba9f79bed8")
+    @Schema(name = "countryId", description = "CountryDtoResp id", example = "086d792e-7974-4fe4-b2e0-2dba9f79bed8")
     @NotNull(message = "countryId should not be empty")
     private UUID countryId;
-
     public BigDecimal getLatitude() {
         return latitude;
     }

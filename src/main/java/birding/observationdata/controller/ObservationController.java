@@ -24,8 +24,6 @@ public class  ObservationController {
 
     @Autowired
     private ObservationService observationService;
-//    @Autowired
-//    PlaceService placeService;
 
     @PostMapping("/observation")
     @Operation(summary = "Create a new observation in DB", description = "Creates a new observation in DB and returns it")
@@ -43,7 +41,6 @@ public class  ObservationController {
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public ResponseEntity<DtoObservationRsp> getObservationById (
             @PathVariable("id") @NotNull UUID id) {
-//        log.info("Gets observation with id {}", id);
         return new ResponseEntity<>(observationService.findObservationById(id), HttpStatus.OK);
     }
 
@@ -61,7 +58,7 @@ public class  ObservationController {
     @ApiResponse(responseCode = "200", description = "A observation was updated successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
-    public DtoObservationRsp putObservation (@Valid @RequestBody DtoObservationRq rqObs, @PathVariable UUID id) throws Exception {
+    public DtoObservationRsp putObservation (@Valid @RequestBody DtoObservationRq rqObs, @PathVariable("id") @NotNull UUID id){
         return observationService.updateObservation(rqObs, id);
     }
 

@@ -40,12 +40,12 @@ public class Observation {
     private UUID placeId;
 
     @CreationTimestamp
-    @Column(name = "created_at", updatable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Timestamp createdAt;
 
     @UpdateTimestamp
-    @Column(name = "modified_at", insertable = false)
+    @Column(name = "modified_at")
     private Timestamp modifiedAt;
 
     public UUID getId() {

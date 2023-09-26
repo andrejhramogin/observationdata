@@ -31,6 +31,8 @@ public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private NestService nestService;
 
+//    private static final Logger logger = LoggerFactory.getLogger(ObservationServiceImpl.class);
+
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dtoObservationRq) {
         //ошибки при возврате save: dtoPlaceRsp = null, type: biotop, location, nestType = null
@@ -59,7 +61,6 @@ public class ObservationServiceImpl implements ObservationService {
             Observation obsReferencedById = obsJpaRepository.getReferenceById(id);
             DtoObservationRsp dtoObservationRsp = observationMapper.entityToDto(obsReferencedById, obsReferencedById.getNest());
             dtoObservationRsp.setPlaceDtoResp(placeClient.getPlaceById(obsReferencedById.getPlaceId()));
-            dtoObservationRsp.setDtoNestRsp(nestMapper.entityToDto(obsReferencedById.getNest()));
             return dtoObservationRsp;
         }
         throw new ResourceNotFoundException("Observation with id " + id + " not found");
@@ -86,6 +87,7 @@ public class ObservationServiceImpl implements ObservationService {
 
     @Override
     public List<DtoObservationRsp> getAllObservation() {
+        //ошибка: nest == null
         List<Observation> listObsEntity = obsJpaRepository.findAll();
         List<DtoObservationRsp> listDtoObsRsp = observationMapper.listEntityToDto(listObsEntity);
         Set<UUID> placeIdSet = new HashSet<>(createSetOfPlaceId(listObsEntity));
@@ -95,6 +97,7 @@ public class ObservationServiceImpl implements ObservationService {
             for (PlaceDtoResp placeDtoResp : listPlaceDtoResp) {
                 if (listObsEntity.get(i).getPlaceId().equals(placeDtoResp.getId())) {
                     listDtoObsRsp.get(i).setPlaceDtoResp(placeDtoResp);
+                    break;
                 }
             }
         }

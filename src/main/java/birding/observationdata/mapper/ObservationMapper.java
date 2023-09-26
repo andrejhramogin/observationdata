@@ -5,6 +5,7 @@ import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
 import birding.observationdata.entity.Nest;
 import birding.observationdata.entity.Observation;
+import jakarta.validation.Valid;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

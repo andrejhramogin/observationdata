@@ -8,7 +8,6 @@ import birding.observationdata.entity.Nest;
 import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.integration.place.PlaceClient;
-import birding.observationdata.mapper.NestMapper;
 import birding.observationdata.mapper.ObservationMapper;
 import birding.observationdata.repository.ObservationJpaRepository;
 import org.junit.jupiter.api.Test;
@@ -21,12 +20,9 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class ObservationServiceImplTest {
-    @Mock
-    private NestMapper nestMapper;
     @Mock
     private ObservationMapper observationMapper;
     @Mock

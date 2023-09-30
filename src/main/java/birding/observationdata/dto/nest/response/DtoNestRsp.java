@@ -4,23 +4,34 @@ import birding.observationdata.entity.Biotope;
 import birding.observationdata.entity.Location;
 import birding.observationdata.entity.NestDimension;
 import birding.observationdata.entity.NestType;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.sql.Timestamp;
 import java.util.UUID;
 
 public class DtoNestRsp {
+    @Schema(name = "id", description = "Nest id", example = "abcefe59-d23e-43a5-b538-7de590390c3c")
     private UUID id;
+    @Schema(name = "eggsQuantity", description = "Quantity of eggs", example = "3")
     private int eggsQuantity;
+    @Schema(name = "chicksQuantity", description = "Quantity of chicks", example = "4")
     private int chicksQuantity;
+    @Schema(name = "description", description = "description of the nest", example = "A nest of the sparrow")
     private String description;
+    @Schema(name = "biotope", description = "Biotope type", example = "Lake")
     private Biotope biotope;
+    @Schema(name = "location", description = "Location type", example = "On the ground")
     private Location location;
+    @Schema(name = "nestType", description = "Type of the nest", example = "Cup-shaped")
     private NestType nestType;
+    @Schema(name = "nestDimension", description = "Dimensions of the nest")
     private NestDimension nestDimension;
+    @Schema(name = "createdAt", description = "Date and time of the record was created",
+            example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
+    @Schema(name = "modifiedAt", description = "Date and time of the record was modified",
+            example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
-
-//    public DtoNestRsp(){}
 
     public UUID getId() {
         return id;
@@ -41,6 +52,7 @@ public class DtoNestRsp {
     public Biotope getBiotope() {
         return biotope;
     }
+
     public void setBiotope(Biotope biotope) {
         this.biotope = biotope;
     }

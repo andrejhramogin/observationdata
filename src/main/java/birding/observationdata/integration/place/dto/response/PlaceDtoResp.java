@@ -1,12 +1,12 @@
 package birding.observationdata.integration.place.dto.response;
 
-import birding.observationdata.dto.country.Country;
+import birding.observationdata.dto.country.CountryDtoResp;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class DtoPlaceRsp {
+public class PlaceDtoResp {
     @Schema(name = "id", description = "Place id", example = "086d792e-7974-4fe4-b2e0-2dba9f79bed8")
     private UUID Id;
 
@@ -23,9 +23,8 @@ public class DtoPlaceRsp {
     @Schema (name = "areaDescr", description = "Description of area", example = "undergrowth")
     private String areaDescr;
 
-    @Schema (name = "country", description = "Country object")
-    private Country country;
-
+    @Schema (name = "country", description = "CountryDtoResp object")
+    private CountryDtoResp countryDtoResp;
     public UUID getId() {
         return Id;
     }
@@ -66,11 +65,11 @@ public class DtoPlaceRsp {
         this.areaDescr = areaDescr;
     }
 
-    public Country getCountry() {
-        return country;
+    public CountryDtoResp getCountryDtoResp() {
+        return countryDtoResp;
     }
 
-    public void setCountry(Country country) {
-        this.country = country;
+    public void setCountryDtoResp(CountryDtoResp countryDtoResp) {
+        this.countryDtoResp = countryDtoResp;
     }
 }

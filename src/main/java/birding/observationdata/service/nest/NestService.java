@@ -12,5 +12,7 @@ public interface NestService {
     DtoNestRsp findNestById(UUID id);
 
     List<DtoNestRsp> getAllNest();
+
+    void deleteNestById(UUID id);
 }
 

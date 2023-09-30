@@ -2,8 +2,10 @@ package birding.observationdata.service.observation;
 
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
+import birding.observationdata.entity.Observation;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public interface ObservationService {
@@ -17,4 +19,5 @@ public interface ObservationService {
     DtoObservationRsp updateObservation(DtoObservationRq rqObs, UUID id);
 
     List<DtoObservationRsp> getAllObservation();
+    Set<UUID> createSetOfPlaceId(List<Observation>listEntity);
 }

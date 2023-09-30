@@ -1,7 +1,8 @@
 package birding.observationdata.dto.observation.response;
 
-import birding.observationdata.integration.place.dto.response.DtoPlaceRsp;
-import birding.observationdata.entity.Nest;
+import birding.observationdata.dto.nest.response.DtoNestRsp;
+import birding.observationdata.integration.place.dto.response.PlaceDtoResp;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -9,15 +10,27 @@ import java.util.UUID;
 
 public class DtoObservationRsp {
 
+    @Schema(name = "id", description = "Observation id", example = "abcefe59-d23e-43a5-b538-7de590390c3c")
     private UUID id;
+    @Schema(name = "date", description = "date of observation", example = "2023-08-14")
     private LocalDate date;
+    @Schema(name = "quantity", description = "number of birds", example = "5")
     private int quantity;
+    @Schema(name = "description", description = "description of the observation", example = "A couple on the nest site")
     private String description;
-    private Nest nest;
+    @Schema(name = "dtoNestRsp", description = "Dto of nest response")
+    private DtoNestRsp dtoNestRsp;
+    @Schema(name = "speciesId", description = "ID of table 'species'", example = "58e6ccb8-102a-4ecd-b43e-e981968cc833")
     private UUID speciesId;
+    @Schema(name = "userId", description = "ID of table 'user'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
     private UUID userId;
-    private DtoPlaceRsp dtoPlaceRsp;
+    @Schema(name = "placeDtoResp", description = "Dto of place response")
+    private PlaceDtoResp placeDtoResp;
+    @Schema(name = "createdAt", description = "Date and time of the record was created",
+            example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
+    @Schema(name = "modifiedAt", description = "Date and time of the record was modified",
+            example = "2022-10-03 10:20:11.114")
     private Timestamp modifiedAt;
 
     public UUID getId() {
@@ -52,12 +65,12 @@ public class DtoObservationRsp {
         this.description = description;
     }
 
-    public Nest getNest() {
-        return nest;
+    public DtoNestRsp getDtoNestRsp() {
+        return dtoNestRsp;
     }
 
-    public void setNest(Nest nest) {
-        this.nest = nest;
+    public void setDtoNestRsp(DtoNestRsp dtoNestRsp) {
+        this.dtoNestRsp = dtoNestRsp;
     }
 
     public UUID getSpeciesId() {
@@ -76,12 +89,12 @@ public class DtoObservationRsp {
         this.userId = userId;
     }
 
-    public DtoPlaceRsp getDtoPlaceRsp() {
-        return dtoPlaceRsp;
+    public PlaceDtoResp getPlaceDtoResp() {
+        return placeDtoResp;
     }
 
-    public void setDtoPlaceRsp(DtoPlaceRsp dtoPlaceRsp) {
-        this.dtoPlaceRsp = dtoPlaceRsp;
+    public void setPlaceDtoResp(PlaceDtoResp placeDtoResp) {
+        this.placeDtoResp = placeDtoResp;
     }
 
     public Timestamp getCreatedAt() {

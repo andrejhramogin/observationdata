@@ -11,6 +11,7 @@ import birding.observationdata.integration.place.PlaceClient;
 import birding.observationdata.mapper.NestMapper;
 import birding.observationdata.mapper.ObservationMapper;
 import birding.observationdata.repository.ObservationJpaRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -21,9 +22,9 @@ import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
+@Slf4j
 @ExtendWith(MockitoExtension.class)
 class ObservationServiceImplTest {
     @Mock
@@ -85,6 +86,17 @@ class ObservationServiceImplTest {
 
     /**
      * Test for method: void deleteObservationById(UUID id)
+     */
+    @Test
+    void deleteObservationById() {
+        UUID uuid = UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016");
+        when(observationJpaRepository.existsById(uuid)).thenReturn(true);
+        observationService.deleteObservationById(uuid);
+        verify(observationJpaRepository).deleteById(uuid);
+    }
+
+    /**
+     * Test for method: void deleteObservationById(UUID id)
      * A test that tests the case where an observation with a given id does not exist (existsById == null).
      */
     @Test
@@ -103,18 +115,23 @@ class ObservationServiceImplTest {
 
         UUID testUUID = UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016");
 
+        Nest nest = new Nest();
+        nest.setId(UUID.fromString("4bcda65c-57f1-4759-a2ca-fa38efa17bbe"));
+
+        DtoNestRsp dtoNestRsp = new DtoNestRsp();
+        dtoNestRsp.setId(UUID.fromString("4bcda65c-57f1-4759-a2ca-fa38efa17bbe"));
+
         Observation observation = new Observation();
-        Nest nest = observation.getNest();
         observation.setId(UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016"));
         observation.setDate(LocalDate.of(2023, 9, 18));
-        observation.setNest(null);
+        observation.setNest(nest);
         observation.setQuantity(5);
         observation.setDescription("description");
 
         DtoObservationRsp dtoObservationRsp = new DtoObservationRsp();
         dtoObservationRsp.setId(UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016"));
         dtoObservationRsp.setDate(LocalDate.of(2023, 9, 18));
-        dtoObservationRsp.setDtoNestRsp(null);
+        dtoObservationRsp.setDtoNestRsp(dtoNestRsp);
         dtoObservationRsp.setQuantity(5);
         dtoObservationRsp.setDescription("description");
 
@@ -125,7 +142,6 @@ class ObservationServiceImplTest {
 
         DtoObservationRsp actualResult = observationService.findObservationById(testUUID);
 
-        //???
         verify(observationJpaRepository).existsById(testUUID);
         verify(observationJpaRepository).getReferenceById(testUUID);
         verify(observationMapper).entityToDto(observation, nest);
@@ -135,13 +151,12 @@ class ObservationServiceImplTest {
         int expectedQuantity = 5;
         LocalDate expectedDate = LocalDate.of(2023, 9, 18);
         String expectedDescription = "description";
-        DtoNestRsp expectedNest = null;
 
         assertEquals(expectedUUID, actualResult.getId());
         assertEquals(expectedQuantity, actualResult.getQuantity());
         assertEquals(expectedDate, actualResult.getDate());
         assertEquals(expectedDescription, actualResult.getDescription());
-        assertEquals(expectedNest, actualResult.getDtoNestRsp());
+        assertEquals(dtoNestRsp, actualResult.getDtoNestRsp());
     }
 
     /**
@@ -160,18 +175,71 @@ class ObservationServiceImplTest {
 
     @Test
     void updateObservation() {
-    }
 
-    @Test
-    void getAllObservation() {
     }
 
     /**
-     *  Test for method: Set<UUID> createSetOfPlaceId(@NotNull List<Observation> listEntity)
+     * Test for method: List<DtoObservationRsp> getAllObservation()
+     * Test that checks the correctness of searching of all observations.
+     */
+    @Test
+    void getAllObservation() {
+        UUID testUUID_1 = UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016");
+        UUID testUUID_2 = UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024");
+
+        Observation observation_1 = new Observation();
+        observation_1.setId(UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016"));
+        observation_1.setDate(LocalDate.of(2023, 10, 6));
+        observation_1.setQuantity(5);
+        observation_1.setDescription("description_1");
+
+        Observation observation_2 = new Observation();
+        observation_2.setId(UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024"));
+        observation_2.setDate(LocalDate.of(2023, 10, 5));
+        observation_2.setQuantity(5);
+        observation_2.setDescription("description_2");
+
+        List<Observation> observationList = new ArrayList<>();
+        observationList.add(observation_1);
+        observationList.add(observation_2);
+
+        DtoObservationRsp dtoObservationRsp_1 = new DtoObservationRsp();
+        dtoObservationRsp_1.setId(UUID.fromString("b22e8db0-470a-4078-9f53-e0ffe2476016"));
+        dtoObservationRsp_1.setDate(LocalDate.of(2023, 10, 6));
+        dtoObservationRsp_1.setQuantity(5);
+        dtoObservationRsp_1.setDescription("description_1");
+
+        DtoObservationRsp dtoObservationRsp_2 = new DtoObservationRsp();
+        dtoObservationRsp_2.setId(UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024"));
+        dtoObservationRsp_2.setDate(LocalDate.of(2023, 10, 5));
+        dtoObservationRsp_2.setQuantity(5);
+        dtoObservationRsp_2.setDescription("description_2");
+
+        List<DtoObservationRsp> dtoObservationRspList = new ArrayList<>();
+        dtoObservationRspList.add(dtoObservationRsp_1);
+        dtoObservationRspList.add(dtoObservationRsp_2);
+
+        when(observationJpaRepository.findAll()).thenReturn(observationList);
+        when(observationMapper.listEntityToDto(observationList)).thenReturn(dtoObservationRspList);
+
+        List<DtoObservationRsp> actualResultList = observationService.getAllObservation();
+
+        verify(observationJpaRepository).findAll();
+        verify(observationMapper).listEntityToDto(observationList);
+
+        assertEquals(dtoObservationRspList.size(), actualResultList.size());
+        assertEquals(testUUID_1, actualResultList.get(0).getId());
+        assertEquals(testUUID_2, actualResultList.get(1).getId());
+        assertEquals(dtoObservationRspList.get(0).getDescription(), actualResultList.get(0).getDescription());
+        assertEquals(dtoObservationRspList.get(0).getDate(), actualResultList.get(0).getDate());
+    }
+
+    /**
+     * Test for method: Set<UUID> createSetOfPlaceId(@NotNull List<Observation> listEntity)
      * Test that checks the correctness of creating Set of placeId from an observation.
      */
     @Test
-    void createSetOfPlaceId(){
+    void createSetOfPlaceId() {
         List<Observation> listEntity = new ArrayList<>();
         Observation observation_1 = new Observation();
         Observation observation_2 = new Observation();
@@ -186,7 +254,7 @@ class ObservationServiceImplTest {
         expectedSet.add(UUID.fromString("f79a34bd-8950-4701-acbd-96f6311a981d"));
         expectedSet.add(UUID.fromString("6b6c58f1-e849-4b3e-98a8-a74ccf44189c"));
 
-        Set<UUID>actualSet;
+        Set<UUID> actualSet;
         actualSet = observationService.createSetOfPlaceId(listEntity);
 
         assertEquals(expectedSet, actualSet);

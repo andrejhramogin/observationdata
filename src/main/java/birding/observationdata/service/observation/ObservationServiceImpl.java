@@ -10,7 +10,7 @@ import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
 import birding.observationdata.service.nest.NestService;
-import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +19,7 @@ import java.sql.Timestamp;
 import java.util.*;
 
 @Service
+@Slf4j
 public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private ObservationJpaRepository obsJpaRepository;
@@ -31,18 +32,16 @@ public class ObservationServiceImpl implements ObservationService {
     @Autowired
     private NestService nestService;
 
-//    private static final Logger logger = LoggerFactory.getLogger(ObservationServiceImpl.class);
-
     @Override
     public DtoObservationRsp createNewObservation(DtoObservationRq dtoObservationRq) {
         //ошибки при возврате save: dtoPlaceRsp = null, type: biotop, location, nestType = null
         // (при вызове findObservationById - все ок)
-        @Valid
         Observation observation = obsJpaRepository.save(observationMapper.dtoToEntity(dtoObservationRq,
                 dtoObservationRq.getDtoNestRq()));
         DtoObservationRsp dtoObservationRsp = observationMapper.entityToDto(observation, observation.getNest());
         dtoObservationRsp.setPlaceDtoResp(placeClient.getPlaceById(observation.getPlaceId()));
         dtoObservationRsp.setDtoNestRsp(nestMapper.entityToDto(observation.getNest()));
+        log.info("Observation created successfully");
         return dtoObservationRsp;
     }
 
@@ -50,6 +49,7 @@ public class ObservationServiceImpl implements ObservationService {
     public void deleteObservationById(UUID id) {
         if (obsJpaRepository.existsById(id)) {
             obsJpaRepository.deleteById(id);
+            log.info("Observations with id = " + id + " deleted successfully");
         } else {
             throw new ResourceNotFoundException("Observation with id " + id + " not found");
         }
@@ -61,25 +61,34 @@ public class ObservationServiceImpl implements ObservationService {
             Observation obsReferencedById = obsJpaRepository.getReferenceById(id);
             DtoObservationRsp dtoObservationRsp = observationMapper.entityToDto(obsReferencedById, obsReferencedById.getNest());
             dtoObservationRsp.setPlaceDtoResp(placeClient.getPlaceById(obsReferencedById.getPlaceId()));
+            log.info("Observation with id = " + id + " found successfully");
             return dtoObservationRsp;
         }
-        throw new ResourceNotFoundException("Observation with id " + id + " not found");
+        throw new ResourceNotFoundException("Observation with id " + id + " was not found");
     }
 
     @Override
     public DtoObservationRsp updateObservation(DtoObservationRq dtoObservationRq, UUID id) {
         if (obsJpaRepository.existsById(id)) {
             Observation updatedObs = obsJpaRepository.getReferenceById(id);
-            UUID nestId = updatedObs.getNest().getId();//т.к созд-ся новый Nest, по этому id удаляется предыдущий
+            boolean isNestExist = false;
+            UUID nestId = null;
+            if (updatedObs.getNest() != null) {
+                nestId = updatedObs.getNest().getId();//т.к созд-ся новый Nest, по этому id удаляется предыдущий
+                isNestExist = true;
+            }
             Timestamp obsCreatedAt = updatedObs.getCreatedAt();//для отображения в dtoObsRsp в ответе (в базе сохраняется верно)
 
             Observation newObs = observationMapper.dtoToEntity(dtoObservationRq, dtoObservationRq.getDtoNestRq());
             newObs.setId(updatedObs.getId());
 
             obsJpaRepository.save(newObs);
-            nestService.deleteNestById(nestId);
+            if (isNestExist) {
+                nestService.deleteNestById(nestId);
+            }
             DtoObservationRsp dtoObservationRsp = findObservationById(updatedObs.getId());
             dtoObservationRsp.setCreatedAt(obsCreatedAt);
+            log.info("Observation with id = " + id + " updated successfully");
             return dtoObservationRsp;
         }
         throw new ResourceNotFoundException("Observation with id " + id + " not found");
@@ -101,6 +110,7 @@ public class ObservationServiceImpl implements ObservationService {
                 }
             }
         }
+        log.info("Observations found successfully");
         return listDtoObsRsp;
     }
 

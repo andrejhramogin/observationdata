@@ -10,6 +10,7 @@ import birding.observationdata.entity.Observation;
 import birding.observationdata.exception.ResourceNotFoundException;
 import birding.observationdata.repository.ObservationJpaRepository;
 import birding.observationdata.service.nest.NestService;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -95,10 +96,15 @@ public class ObservationServiceImpl implements ObservationService {
     }
 
     @Override
+    @Transactional
     public List<DtoObservationRsp> getAllObservation() {
         //ошибка: nest == null
         List<Observation> listObsEntity = obsJpaRepository.findAll();
-        List<DtoObservationRsp> listDtoObsRsp = observationMapper.listEntityToDto(listObsEntity);
+
+        List<DtoObservationRsp> listDtoObsRsp = new ArrayList<>();
+        for (Observation observation : listObsEntity) {
+            listDtoObsRsp.add(observationMapper.entityToDto(observation, observation.getNest()));
+        }
         Set<UUID> placeIdSet = new HashSet<>(createSetOfPlaceId(listObsEntity));
         List<PlaceDtoResp> listPlaceDtoResp = placeClient.getPlacesByIdList(placeIdSet);
 

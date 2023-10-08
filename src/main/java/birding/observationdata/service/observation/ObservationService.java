@@ -19,5 +19,6 @@ public interface ObservationService {
     DtoObservationRsp updateObservation(DtoObservationRq rqObs, UUID id);
 
     List<DtoObservationRsp> getAllObservation();
-    Set<UUID> createSetOfPlaceId(List<Observation>listEntity);
+
+    Set<UUID> createSetOfPlaceId(List<Observation> listEntity);
 }

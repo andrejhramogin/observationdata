@@ -1,7 +1,6 @@
 package birding.observationdata.controller;
 
 import birding.observationdata.entity.Observation;
-import birding.observationdata.integration.place.PlaceClient;
 import birding.observationdata.repository.ObservationJpaRepository;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -11,7 +10,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,15 +30,15 @@ import java.util.UUID;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Test class for with Testcontainer for testing ObservationController.class
+ * Test class with PostgreSQLContainer (Testcontainer) for testing ObservationController.class
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc(printOnlyOnFailure = false)
+@ExtendWith(MockitoExtension.class)
 public class ObservationControllerTest {
 
     @Autowired
@@ -98,7 +98,6 @@ public class ObservationControllerTest {
         observation_1.setDescription("description1");
         observation_1.setSpeciesId(UUID.fromString("4bcda65c-57f1-4759-a2ca-fa38efa17bbe"));
         observation_1.setUserId(UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024"));
-        observation_1.setPlaceId(UUID.fromString("7cab8008-2b37-4123-a712-ad5914b60465"));
 
         Observation observation_2 = new Observation();
         observation_2.setDate(LocalDate.of(2023, 9, 18));
@@ -107,7 +106,6 @@ public class ObservationControllerTest {
         observation_2.setDescription("description2");
         observation_2.setSpeciesId(UUID.fromString("4bcda65c-57f1-4759-a2ca-fa38efa17bbe"));
         observation_2.setUserId(UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024"));
-        observation_2.setPlaceId(UUID.fromString("7cab8008-2b37-4123-a712-ad5914b60465"));
 
         List<Observation> observations = new ArrayList<>();
         observations.add(observation_1);
@@ -130,6 +128,7 @@ public class ObservationControllerTest {
      *
      * @throws Exception
      */
+
     @Test
     void shouldGetObservationById() throws Exception {
 
@@ -221,8 +220,7 @@ public class ObservationControllerTest {
                                 "nestDimension": null
                                 },
                             "speciesId":"4bcda65c-57f1-4759-a2ca-fa38efa17bbe",
-                            "userId":"6a61b1f4-7dcd-4b79-a344-5f246fabe024",
-                            "placeId":"9bb6e59f-0ef3-4cd0-b849-b5849c60b604"
+                            "userId":"6a61b1f4-7dcd-4b79-a344-5f246fabe024"
                         }
                         """);
 
@@ -275,8 +273,7 @@ public class ObservationControllerTest {
                                 "nestDimension": null
                                 },
                             "speciesId":"6a61b1f4-7dcd-4b79-a344-5f246fabe024",
-                            "userId":"4bcda65c-57f1-4759-a2ca-fa38efa17bbe",
-                            "placeId":"9bb6e59f-0ef3-4cd0-b849-b5849c60b604"
+                            "userId":"4bcda65c-57f1-4759-a2ca-fa38efa17bbe"
                         }
                         """);
         mockMvc.perform(requestBuilder)
@@ -337,7 +334,6 @@ public class ObservationControllerTest {
         observation.setDescription("observation description");
         observation.setSpeciesId(UUID.fromString("4bcda65c-57f1-4759-a2ca-fa38efa17bbe"));
         observation.setUserId(UUID.fromString("6a61b1f4-7dcd-4b79-a344-5f246fabe024"));
-        observation.setPlaceId(UUID.fromString("9bb6e59f-0ef3-4cd0-b849-b5849c60b604"));
 
         return observationJpaRepository.save(observation);
     }

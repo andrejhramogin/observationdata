@@ -2,7 +2,6 @@ package birding.observationdata.dto.nest.response;
 
 import birding.observationdata.entity.Biotope;
 import birding.observationdata.entity.Location;
-import birding.observationdata.entity.NestDimension;
 import birding.observationdata.entity.NestType;
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -24,8 +23,6 @@ public class DtoNestRsp {
     private Location location;
     @Schema(name = "nestType", description = "Type of the nest", example = "Cup-shaped")
     private NestType nestType;
-    @Schema(name = "nestDimension", description = "Dimensions of the nest")
-    private NestDimension nestDimension;
     @Schema(name = "createdAt", description = "Date and time of the record was created",
             example = "2022-10-03 10:20:11.114")
     private Timestamp createdAt;
@@ -89,13 +86,13 @@ public class DtoNestRsp {
         this.nestType = nestType;
     }
 
-    public NestDimension getNestDimension() {
-        return nestDimension;
-    }
-
-    public void setNestDimension(NestDimension nestDimension) {
-        this.nestDimension = nestDimension;
-    }
+//    public NestDimension getNestDimension() {
+//        return nestDimension;
+//    }
+//
+//    public void setNestDimension(NestDimension nestDimension) {
+//        this.nestDimension = nestDimension;
+//    }
 
     public Timestamp getCreatedAt() {
         return createdAt;

@@ -13,10 +13,6 @@ public class NestDimension {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    public NestDimension(UUID id) {
-        this.id = id;
-    }
-
     public UUID getId() {
         return id;
     }

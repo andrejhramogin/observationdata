@@ -37,31 +37,21 @@ databaseChangeLog:
                   type: UUID
                   constraints:
                     nullable: false
-              #                    foreignKeyName: species_id
-              #                    references: species(id)
               - column:
                   name: user_id
                   type: UUID
                   constraints:
                     nullable: false
-              #                    foreignKeyName: user_id
-              #                    references: user(id)
               - column:
                   name: place_id
                   type: UUID
-                  constraints:
-                    nullable: false
-              #                    foreignKeyName: place_id
-              #                    references: place(id)
+#                  constraints:
+#                    nullable: false
               - column:
                   name: created_at
                   type: timestamp without time zone
                   defaultValue: now()
-                  constraints:
-#                    nullable: false
               - column:
                   name: modified_at
                   type: timestamp without time zone
                   defaultValue: now()
-#                  constraints:
-#                    nullable: false

@@ -14,9 +14,6 @@ import java.util.UUID;
 )
 public interface PlaceClient {
 
-    @GetMapping("/places")
-    List<PlaceDtoResp> getPlaces();
-
     @GetMapping("/places/{id}")
     PlaceDtoResp getPlaceById(@PathVariable(value = "id") UUID id);
 

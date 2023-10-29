@@ -26,7 +26,7 @@ public class Observation {
     @Column(name = "description")
     private String description;
 
-    @OneToOne(optional = true, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "nest_id", referencedColumnName = "id")
     private Nest nest;
 
@@ -36,17 +36,33 @@ public class Observation {
     @Column(name = "user_id", nullable = false)
     private UUID userId;
 
-    @Column(name = "place_id", nullable = false)
+    @Column(name = "place_id")
     private UUID placeId;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
-    //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Timestamp createdAt;
 
     @UpdateTimestamp
     @Column(name = "modified_at")
     private Timestamp modifiedAt;
+
+    public Observation() {
+    }
+
+    public Observation(LocalDate date, int quantity, String description,
+                       Nest nest, UUID speciesId, UUID userId, UUID placeId,
+                       Timestamp createdAt, Timestamp modifiedAt) {
+        this.date = date;
+        this.quantity = quantity;
+        this.description = description;
+        this.nest = nest;
+        this.speciesId = speciesId;
+        this.userId = userId;
+        this.placeId = placeId;
+        this.createdAt = createdAt;
+        this.modifiedAt = modifiedAt;
+    }
 
     public UUID getId() {
         return id;

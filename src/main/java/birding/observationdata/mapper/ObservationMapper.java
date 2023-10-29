@@ -25,6 +25,4 @@ public interface ObservationMapper {
 @Mapping(target = "createdAt", source = "observation.createdAt")
 @Mapping(target = "modifiedAt", source = "observation.modifiedAt")
     DtoObservationRsp entityToDto(Observation observation, Nest nest);
-
-    List<DtoObservationRsp> listEntityToDto(List<Observation> list);
 }

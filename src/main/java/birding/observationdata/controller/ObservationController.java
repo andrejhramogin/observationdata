@@ -2,6 +2,8 @@ package birding.observationdata.controller;
 
 import birding.observationdata.dto.observation.request.DtoObservationRq;
 import birding.observationdata.dto.observation.response.DtoObservationRsp;
+import birding.observationdata.entity.ObservationPage;
+import birding.observationdata.entity.ObservationSearchCriteria;
 import birding.observationdata.service.observation.ObservationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -9,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +28,7 @@ public class ObservationController {
 
     @PostMapping("/observation")
     @Operation(summary = "Create a new observation in DB", description = "Creates a new observation in DB and returns it")
-    @ApiResponse(responseCode = "200", description = "A observation was created successfully")
+    @ApiResponse(responseCode = "201", description = "A observation was created successfully")
     @ApiResponse(responseCode = "400", description = "Bad request")
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public ResponseEntity<DtoObservationRsp> createObservation(@Valid @RequestBody DtoObservationRq observation) {
@@ -49,6 +52,18 @@ public class ObservationController {
     @ApiResponse(responseCode = "500", description = "Internal server error")
     public ResponseEntity<List<DtoObservationRsp>> getAllObservation() {
         return new ResponseEntity<>(observationService.getAllObservation(), HttpStatus.OK);
+    }
+
+    @GetMapping("/observationfiltr")
+    @Operation(summary = "Get observation with sorting", description = "Get observations with filtration and sorting " +
+            "according to the specified parameters")
+    @ApiResponse(responseCode = "200", description = "observation from the table 'observations' were received successfully")
+    @ApiResponse(responseCode = "400", description = "Bad request")
+    @ApiResponse(responseCode = "500", description = "Internal server error")
+    public ResponseEntity<Page<DtoObservationRsp>> getObservationWithFiltration(ObservationPage observationPage,
+                                                                          ObservationSearchCriteria observationSearchCriteria) {
+        return new ResponseEntity<>(observationService.getObservationsWithSortingAndFiltration(observationPage,
+                observationSearchCriteria), HttpStatus.OK);
     }
 
     @PutMapping("/observation/{id}")

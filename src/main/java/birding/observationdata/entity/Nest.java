@@ -18,7 +18,7 @@ public class Nest {
     @Column(name = "eggs_quantity")
     private int eggsQuantity;
 
-    @Column
+    @Column(name = "chicks_quantity")
     private int chicksQuantity;
 
     @Column(name = "description")
@@ -36,7 +36,7 @@ public class Nest {
     @JoinColumn(name = "nest_type_id", referencedColumnName = "id")
     private NestType nestType;
 
-    @OneToOne(optional = false)
+    @OneToOne
     @JoinColumn(name = "nest_dimension_id", referencedColumnName = "id")
     private NestDimension nestDimension;
 

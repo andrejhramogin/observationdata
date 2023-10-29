@@ -31,7 +31,6 @@ public class DtoObservationRq {
     @NotNull(message = "User can`t be null")
     @Schema(name = "userId", description = "ID of table 'user'", example = "fb68f075-dec4-44b6-9b44-4ccfc6507d7e")
     private UUID userId;
-    @NotNull(message = "Place id can`t be null")
     @Schema(name = "placeId", description = "ID of table 'place'", example = "e17002a5-63aa-4ab9-8ed0-bd379a1c7255")
     private UUID placeId;
     @Schema(name = "createdAt", description = "Date and time of the record was created",

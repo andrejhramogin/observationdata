@@ -30,12 +30,16 @@ to the following criteria:
 
 sudo mvn spring-boot:build-image
 
+Для отправки образа на docker hub используйте команду:
+
+sudo docker push andrejhr/observation:spring-plugin
+
 После окончания процесса создания образа можно с помощью комманды:
 
 sudo docker image ls
 
 просмотреть список имеющихся образов. Образ данного приложения имеет имя
-andrejhr/observation (tag spring-plugin).
+andrejhr/observation:tag spring-plugin.
 
 # Создание и запуск JAR-файла с помощью Maven
 

@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+/**
+ * FeignClient for Place service
+ */
 @FeignClient(
         name = "place-client",
         url = "http://localhost:8081"

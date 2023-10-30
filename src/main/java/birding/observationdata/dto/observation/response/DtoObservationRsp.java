@@ -8,6 +8,9 @@ import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.UUID;
 
+/**
+ * DTO of response of observation
+ */
 public class DtoObservationRsp {
 
     @Schema(name = "id", description = "Observation id", example = "abcefe59-d23e-43a5-b538-7de590390c3c")

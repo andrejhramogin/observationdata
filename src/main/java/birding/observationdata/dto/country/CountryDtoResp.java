@@ -4,6 +4,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.UUID;
 
+/**
+ * DTO response of country name
+ */
 public class CountryDtoResp {
     @Schema(name = "id", description = "Country id", example = "086d792e-7974-4fe4-b2e0-2dba9f79bed8")
     private UUID id;

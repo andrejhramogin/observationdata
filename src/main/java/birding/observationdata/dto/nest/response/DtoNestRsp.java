@@ -8,6 +8,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.sql.Timestamp;
 import java.util.UUID;
 
+/**
+ * DTO fo response of Nest
+ */
 public class DtoNestRsp {
     @Schema(name = "id", description = "Nest id", example = "abcefe59-d23e-43a5-b538-7de590390c3c")
     private UUID id;

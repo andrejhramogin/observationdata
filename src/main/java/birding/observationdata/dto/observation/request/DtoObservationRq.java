@@ -11,6 +11,9 @@ import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.UUID;
 
+/**
+ * DTO of request of Observation
+ */
 public class DtoObservationRq {
     @NotNull(message = "Date can`t be null")
     @PastOrPresent(message = "Date or time must be in the past or in the present")

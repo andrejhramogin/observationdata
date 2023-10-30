@@ -9,6 +9,9 @@ import jakarta.validation.constraints.Size;
 
 import java.sql.Timestamp;
 
+/**
+ * DTO for request of Nest
+ */
 public class DtoNestRq {
     @Size(min = 1, max = 50, message = "Eggs quantity myst be between 1 and 50")
     @Schema(name = "eggsQuantity", description = "Quantity of eggs", example = "3")
